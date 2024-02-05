@@ -4,5 +4,5 @@ heroText: Maple Personal document
 tagline: A learning document for web development
 actionText: null
 actionLink: 
-footer: Give yourself some time
+footer: false
 ---
