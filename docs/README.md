@@ -1,8 +1,8 @@
 ---
 home: true
-heroText: Maple Personal document
+heroText: Maple Personal document 
 tagline: A learning document for web development
-actionText: Go →
+actionText: null
 actionLink: 
 footer: Give yourself some time
 ---
