@@ -22,4 +22,13 @@ module.exports = [
            }
         ],
     },
+    {
+        text: '学习',
+        items: [
+            {
+                text: "Markdown 基础语法",
+                link: "/views/studyPage/markdownStudy",
+            },
+        ],
+    },
 ]

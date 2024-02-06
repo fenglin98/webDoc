@@ -16,15 +16,30 @@ module.exports = {
     },
     ],
     // 开发规范 
-    '/views/projectSpecification':[
-    {
-        title: "git规范",
-        collapsable: true,
-        children:[
-        {   title: "git 操作流程",
-            path: "/views/projectSpecification/gitRelated/gitProcess",
+    '/views/projectSpecification': [
+        {
+            title: "git规范",
+            collapsable: true,
+            children: [
+                {
+                    title: "git 操作流程",
+                    path: "/views/projectSpecification/gitRelated/gitProcess",
+                }
+            ]
         }
-        ]
-    }
-]
+    ],
+    // 学习 
+    '/views/studyPage':[
+     {
+        title: '学习',
+        collapsable: true,
+        children: [
+            {
+                title: "Markdown 基础语法",
+                path: "/views/studyPage/markdownStudy",
+            },
+
+        ],
+     }
+    ],
 }
