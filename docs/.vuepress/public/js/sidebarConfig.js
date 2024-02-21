@@ -12,6 +12,10 @@ module.exports = {
                 title: "CSS 样式重置",
                 path: "/views/utilsPage/cssStyleReset",
             },
+            {
+                title: "资源记录",
+                path: "/views/utilsPage/resource",
+            },
         ],
     },
     ],
@@ -26,20 +30,38 @@ module.exports = {
                     path: "/views/projectSpecification/gitRelated/gitProcess",
                 }
             ]
-        }
+        },
+        {
+            title: "代码规范",
+            collapsable: true,
+            children: [
+                {
+                    title: "JavaScript 规范",
+                    path: "/views/projectSpecification/codeSpecification/javaScriptCode",
+                },
+                {
+                    title: "CSS 规范",
+                    path: "/views/projectSpecification/codeSpecification/cssCode",
+                },
+                {
+                    title: "HTML 规范",
+                    path: "/views/projectSpecification/codeSpecification/htmlCode",
+                }
+            ]
+        },
     ],
     // 学习 
-    '/views/studyPage':[
-     {
-        title: '学习',
-        collapsable: true,
-        children: [
-            {
-                title: "Markdown 基础语法",
-                path: "/views/studyPage/markdownStudy",
-            },
+    '/views/studyPage': [
+        {
+            title: '学习',
+            collapsable: true,
+            children: [
+                {
+                    title: "Markdown 基础语法",
+                    path: "/views/studyPage/markdownStudy",
+                },
 
-        ],
-     }
+            ],
+        }
     ],
 }

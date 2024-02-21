@@ -11,6 +11,10 @@ module.exports = [
                 text: "CSS 样式重置",
                 link: "/views/utilsPage/cssStyleReset",
             },
+            {
+                text: "资源记录",
+                link: "/views/utilsPage/resource",
+            },
         ],
     },
     {
@@ -19,7 +23,24 @@ module.exports = [
            {
             text:'git 操作流程',
             link:'/views/projectSpecification/gitRelated/gitProcess'
-           }
+           },
+           {
+            text: "编码规范",
+            items: [
+              {
+                text: "JavaScript 规范",
+                link: "/views/projectSpecification/codeSpecification/javaScriptCode",
+              },
+              {
+                text: "CSS 规范",
+                link: "/views/projectSpecification/codeSpecification/cssCode",
+              },
+              {
+                text: "HTML 规范",
+                link: "/views/projectSpecification/codeSpecification/htmlCode",
+              },
+            ],
+          },
         ],
     },
     {
