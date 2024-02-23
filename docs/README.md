@@ -1,7 +1,7 @@
 ---
 home: true
 heroText: Maple Personal document 
-tagline: A learning document for web development
+tagline: null
 actionText: null
 actionLink: 
 footer: false

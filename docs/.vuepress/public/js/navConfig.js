@@ -1,5 +1,6 @@
 module.exports = [
     { text: 'Home', link: '/' },
+    // 工具
     {
         text: 'Util',
         items: [
@@ -17,6 +18,7 @@ module.exports = [
             },
         ],
     },
+    // 开发规范
     {
         text: '开发规范',
         items: [
@@ -43,12 +45,27 @@ module.exports = [
           },
         ],
     },
+    // 学习
     {
         text: '学习',
         items: [
             {
                 text: "Markdown 基础语法",
                 link: "/views/studyPage/markdownStudy",
+            },
+        ],
+    },
+    // 问题记录
+    {
+        text: '问题记录',
+        items: [
+            {
+                text: "JavaScript 相关",
+                link: "/views/ProblemRecord/JavaScriptAbout",
+            },
+            {
+                text: "Vue 相关",
+                link: "/views/ProblemRecord/VueAbout",
             },
         ],
     },

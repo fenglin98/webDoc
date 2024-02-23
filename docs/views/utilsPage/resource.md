@@ -16,7 +16,8 @@ author: Maple
 <a href="https://github.com/coreybutler/nvm-windows/releases" target="_blank">NVM node 版本管理工具下载 </a>   <a href="https://juejin.cn/post/7124971131131396109" target="_blank">( 使用教程 )  </a>   </br>
 <a href="https://www.runoob.com/" target="_blank">菜鸟教程 </a> </br>
 <a href="https://www.typescriptlang.org/zh/" target="_blank">TypeScript </a> </br>
-<a href=" https://echarts.apache.org/zh/index.html" target="_blank">Echarts 中文文档 </a> </br>
+<a href="https://echarts.apache.org/zh/index.html" target="_blank">Echarts 中文文档 </a> </br>
+<a href="https://webpack.docschina.org/concepts/" target="_blank">webpack 中文文档 </a> </br>
 <a href="https://code.visualstudio.com/" target="_blank">vscode 网站 </a> </br>
 <a href="https://dukou.dev/" target="_blank">调查兵团 </a>  <a href=" https://dukoucloud.github.io/dukou/" target="_blank">(备用) </a>   </br>
 <a href="https://xn--4gq62f52gdss.club/#/login" target="_blank">调查兵团2 </a> </br>

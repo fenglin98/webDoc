@@ -46,7 +46,50 @@ return untils
 }))
 ```
 
-#
+# 浮点数精度计算
+
+```javascript
+
+(function (global, fun) {
+    typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = fun() :
+        typeof define === 'function' && define.amd ? define(fun) :
+            (global = global, global.floatCalculation = fun());
+}(this, function () {
+    //** */
+    function floatCalculation(val1 = 0, val2 = 0, rule = '+') {
+        var resultData = 0
+        var p1 = 0  //  exponential1 
+        var p2 = 0  //  exponential2
+        var pMax = 0  //
+        function getDataLength(val) {
+            const len = val.toString().length - val.toString().indexOf('.') - 1
+            return Math.pow(10, len)
+        }
+        p1 = getDataLength(val1)
+        p2 = getDataLength(val2)
+        pMax = Math.max(p1, p2)
+        switch (rule) {
+            case '+':  // +
+                resultData = ((val1 * pMax) + (val2 * pMax)) / pMax
+                break;
+            case '-': // -
+                resultData = ((val1 * pMax) - (val2 * pMax)) / pMax
+                break; 
+            case '*': // * 
+                resultData = ((val1 * p1) * (val2 * p2)) / (p1 * p2)
+                break;
+            case '/': //  / 
+                resultData = ((val1 * p1) / (val2 * p2)) / (p1 / p2)
+                break;
+            default:
+                break;
+        }
+        return resultData;
+    }
+    return floatCalculation
+}))
+
+```
 
 
 

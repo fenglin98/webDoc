@@ -64,4 +64,21 @@ module.exports = {
             ],
         }
     ],
+    // 问题记录
+    '/views/ProblemRecord':[
+        {
+            title: '问题记录',
+            collapsable: true,
+            children: [
+                {
+                    title: "JavaScript 相关",
+                    path: "/views/ProblemRecord/JavaScriptAbout",
+                },
+                {
+                    title: "Vue 相关",
+                    path: "/views/ProblemRecord/VueAbout",
+                },
+            ],
+        }
+    ],
 }
