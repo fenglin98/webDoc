@@ -7,5 +7,9 @@
     "vuepress": "^1.9.10",
     "vuepress-plugin-zooming": "^1.1.8",
     "vuepress-theme-reco": "^1.6.17"
+  },
+  "dependencies": {
+    "@vuepress-reco/vuepress-plugin-kan-ban-niang": "^1.0.5",
+    "vuepress-plugin-one-click-copy": "^1.0.6"
   }
 }
