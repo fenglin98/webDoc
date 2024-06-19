@@ -60,12 +60,33 @@ module.exports = {
                     title: "Markdown 基础语法",
                     path: "/views/studyPage/markdownStudy",
                 },
-
+                {
+                    title: "JavaScript 正则基本语法",
+                    path: "/views/studyPage/regularExpression",
+                },
+                {
+                    title: "express学习文档",
+                    collapsable: true,
+                    children: [
+                        {
+                            title: "简单的express服务",
+                            path: "/views/studyPage/express/expressDemo",
+                        },
+                        {
+                            title: "express 中间件",
+                            path: "/views/studyPage/express/expressMiddleware",
+                        },
+                        {
+                            title: "express 路由中间件",
+                            path: "/views/studyPage/express/expressRoute",
+                        },
+                    ],
+                },
             ],
         }
     ],
     // 问题记录
-    '/views/ProblemRecord':[
+    '/views/ProblemRecord': [
         {
             title: '问题记录',
             collapsable: true,
