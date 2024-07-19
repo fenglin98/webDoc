@@ -21,6 +21,8 @@ author: Maple
 <a href="https://code.visualstudio.com/" target="_blank">vscode 网站 </a> </br>
 <a href="https://dukou.dev/" target="_blank">调查兵团 </a>  <a href=" https://dukoucloud.github.io/dukou/" target="_blank">(备用) </a>   </br>
 <a href="https://xn--4gq62f52gdss.club/#/login" target="_blank">调查兵团2 </a> </br>
+<a href="https://agentneo.tech" target="_blank">调查兵团3 </a> </br>
+<a href="https://dashboard.ouonet.work" target="_blank">调查兵团4 </a> </br>
 
 ## Vscode 常用插件
 ![Vscode](./images/vscode01.jpg)
