@@ -1,4 +1,22 @@
 module.exports = {
+        '/views/aiStudyPage': [
+        // Ai 学习
+        {
+            title: 'AI学习',
+            collapsable: true,
+            children: [
+                {
+                    title: "CaluedCode 学习",
+                    children: [
+                        {
+                            title: "安装claude code",
+                            path: "/views/aiStudyPage/claudeCode/claudeCodeInstall",
+                        },
+                    ]
+                },
+            ],
+        },
+    ],
     // Utils 工具
     '/views/utilsPage': [{
         title: 'Util',
@@ -102,4 +120,5 @@ module.exports = {
             ],
         }
     ],
+
 }

@@ -1,5 +1,20 @@
 module.exports = [
     { text: 'Home', link: '/' },
+          // Ai 学习
+    {
+        text: 'AI学习',
+        items: [
+            {
+                text: "CaluedCode 学习",
+                  items: [
+                    {
+                        text: "安装claude code",
+                        link: "/views/aiStudyPage/claudeCode/claudeCodeInstall",
+                    },
+                ]
+            },
+        ],
+    },
     // 工具
     {
         text: 'Util',
@@ -90,4 +105,5 @@ module.exports = [
             },
         ],
     },
+
 ]
