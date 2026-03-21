@@ -1,0 +1,23 @@
+# .github/workflows/deploy.yml
+name: 部署到 GitHub Pages
+
+on:
+  push:
+    branches: [ main ] # 当你推送到 main 或 master 分支时触发
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16' # 推荐使用 Node 16 以避免之前的 OpenSSL 报错
+      - run: npm install # 安装依赖
+      - run: npm run build # 执行构建
+
+      - name: 部署到 GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/.vuepress/dist # 指定你构建好的文件夹路径
