@@ -1,18 +1,21 @@
 const nav = require('./public/js/navConfig')
 const sidebar = require('./public/js/sidebarConfig')
-const plugins =require('./public/js/pluginsConfig')
+const plugins = require('./public/js/pluginsConfig')
 const head = require('./public/js/headConfig')
-module.exports ={
-    title:'Maple',
-    base:'/webDoc/',
-    theme:'reco',
+module.exports = {
+    title: 'Maple',
+    base: '/webDoc/',
+    theme: 'reco',
+    head: [
+        ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes' }]
+    ],
     themeConfig: {
         head,
         nav,
         sidebar,
-        subSidebar:'auto', //在所有页面中启用自动生成子侧边栏
+        subSidebar: 'auto', //在所有页面中启用自动生成子侧边栏
         logo: "/img/Maple_icon.png",
         authorAvatar: "/img/Maple_icon.png",
-      },
-      plugins,
+    },
+    plugins,
 }
