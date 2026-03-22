@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Ollama 使用指南 | Maple</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="Ollama 本地大模型运行工具">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
+    
+    <link rel="preload" href="/webDoc/assets/css/0.styles.082097fb.css" as="style"><link rel="preload" href="/webDoc/assets/js/app.3f5d470f.js" as="script"><link rel="preload" href="/webDoc/assets/js/7.8061b6b1.js" as="script"><link rel="preload" href="/webDoc/assets/js/2.a3cee522.js" as="script"><link rel="preload" href="/webDoc/assets/js/1.50eccc97.js" as="script"><link rel="preload" href="/webDoc/assets/js/48.aa5ccc11.js" as="script"><link rel="prefetch" href="/webDoc/assets/js/10.7157a5d0.js"><link rel="prefetch" href="/webDoc/assets/js/11.d046051a.js"><link rel="prefetch" href="/webDoc/assets/js/14.ce099804.js"><link rel="prefetch" href="/webDoc/assets/js/15.6ac51fc2.js"><link rel="prefetch" href="/webDoc/assets/js/16.db3347c7.js"><link rel="prefetch" href="/webDoc/assets/js/17.37902c1f.js"><link rel="prefetch" href="/webDoc/assets/js/18.cdc2813e.js"><link rel="prefetch" href="/webDoc/assets/js/19.b490b2e7.js"><link rel="prefetch" href="/webDoc/assets/js/20.66529de1.js"><link rel="prefetch" href="/webDoc/assets/js/21.bb88374f.js"><link rel="prefetch" href="/webDoc/assets/js/22.99e380db.js"><link rel="prefetch" href="/webDoc/assets/js/23.794d1902.js"><link rel="prefetch" href="/webDoc/assets/js/24.cd07dfbc.js"><link rel="prefetch" href="/webDoc/assets/js/25.5f70a5da.js"><link rel="prefetch" href="/webDoc/assets/js/26.2ead4332.js"><link rel="prefetch" href="/webDoc/assets/js/27.d527ac50.js"><link rel="prefetch" href="/webDoc/assets/js/28.e2932b03.js"><link rel="prefetch" href="/webDoc/assets/js/29.498e6e76.js"><link rel="prefetch" href="/webDoc/assets/js/3.0679a152.js"><link rel="prefetch" href="/webDoc/assets/js/30.67ecaf7d.js"><link rel="prefetch" href="/webDoc/assets/js/31.e61f14c1.js"><link rel="prefetch" href="/webDoc/assets/js/32.0f03ad64.js"><link rel="prefetch" href="/webDoc/assets/js/33.1fddd75f.js"><link rel="prefetch" href="/webDoc/assets/js/34.1cc10c6d.js"><link rel="prefetch" href="/webDoc/assets/js/35.426bde68.js"><link rel="prefetch" href="/webDoc/assets/js/36.4de940dd.js"><link rel="prefetch" href="/webDoc/assets/js/37.90ab3c54.js"><link rel="prefetch" href="/webDoc/assets/js/38.fb92076c.js"><link rel="prefetch" href="/webDoc/assets/js/39.db357443.js"><link rel="prefetch" href="/webDoc/assets/js/4.69920340.js"><link rel="prefetch" href="/webDoc/assets/js/40.7ed6f13d.js"><link rel="prefetch" href="/webDoc/assets/js/41.b46ff50f.js"><link rel="prefetch" href="/webDoc/assets/js/42.3b82fd67.js"><link rel="prefetch" href="/webDoc/assets/js/43.d52c9d0c.js"><link rel="prefetch" href="/webDoc/assets/js/44.b3687642.js"><link rel="prefetch" href="/webDoc/assets/js/45.73ef25f0.js"><link rel="prefetch" href="/webDoc/assets/js/46.6c030e68.js"><link rel="prefetch" href="/webDoc/assets/js/47.5ae79c3f.js"><link rel="prefetch" href="/webDoc/assets/js/49.c9446703.js"><link rel="prefetch" href="/webDoc/assets/js/5.39941ce7.js"><link rel="prefetch" href="/webDoc/assets/js/50.96bdeb98.js"><link rel="prefetch" href="/webDoc/assets/js/51.95e6bfdc.js"><link rel="prefetch" href="/webDoc/assets/js/52.4b7090db.js"><link rel="prefetch" href="/webDoc/assets/js/53.23ae6434.js"><link rel="prefetch" href="/webDoc/assets/js/54.9a733eb7.js"><link rel="prefetch" href="/webDoc/assets/js/55.1ff430b6.js"><link rel="prefetch" href="/webDoc/assets/js/56.8ca48557.js"><link rel="prefetch" href="/webDoc/assets/js/57.153ef1df.js"><link rel="prefetch" href="/webDoc/assets/js/58.f9ba7a48.js"><link rel="prefetch" href="/webDoc/assets/js/59.5a3a0707.js"><link rel="prefetch" href="/webDoc/assets/js/6.4c7dc840.js"><link rel="prefetch" href="/webDoc/assets/js/60.581fbd17.js"><link rel="prefetch" href="/webDoc/assets/js/61.45ebcaec.js"><link rel="prefetch" href="/webDoc/assets/js/8.f9c1c1a8.js"><link rel="prefetch" href="/webDoc/assets/js/9.a096c348.js"><link rel="prefetch" href="/webDoc/assets/js/vendors~docsearch.0feec34c.js">
+    <link rel="stylesheet" href="/webDoc/assets/css/0.styles.082097fb.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>Maple</h3> <p class="description" data-v-59e6cb88></p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2026
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/webDoc/" class="home-link router-link-active"><img src="/webDoc/img/Maple_icon.png" alt="Maple" class="logo"> <span class="site-name">Maple</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/webDoc/" class="nav-link"><i class="undefined"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      AI学习
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>CaluedCode 学习</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/webDoc/views/aiStudyPage/claudeCode/claudeCodeInstall.html" class="nav-link"><i class="undefined"></i>
+  安装claude code
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/webDoc/views/aiStudyPage/ollama/ollamaDoc.html" aria-current="page" class="nav-link router-link-exact-active router-link-active"><i class="undefined"></i>
+  Ollama 使用指南
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/aiStudyPage/lmstudio/lmstudioDoc.html" class="nav-link"><i class="undefined"></i>
+  LM Studio 使用指南
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Util
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/webDoc/views/utilsPage/jsUtils.html" class="nav-link"><i class="undefined"></i>
+  JavaScript 工具封装
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/utilsPage/cssStyleReset.html" class="nav-link"><i class="undefined"></i>
+  CSS 样式重置
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/utilsPage/resource.html" class="nav-link"><i class="undefined"></i>
+  资源记录
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      开发规范
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/webDoc/views/projectSpecification/gitRelated/gitProcess.html" class="nav-link"><i class="undefined"></i>
+  git 操作流程
+</a></li><li class="dropdown-item"><h4>编码规范</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/webDoc/views/projectSpecification/codeSpecification/javaScriptCode.html" class="nav-link"><i class="undefined"></i>
+  JavaScript 规范
+</a></li><li class="dropdown-subitem"><a href="/webDoc/views/projectSpecification/codeSpecification/cssCode.html" class="nav-link"><i class="undefined"></i>
+  CSS 规范
+</a></li><li class="dropdown-subitem"><a href="/webDoc/views/projectSpecification/codeSpecification/htmlCode.html" class="nav-link"><i class="undefined"></i>
+  HTML 规范
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      学习
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/webDoc/views/studyPage/markdownStudy.html" class="nav-link"><i class="undefined"></i>
+  Markdown 基础语法
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/studyPage/regularExpression.html" class="nav-link"><i class="undefined"></i>
+  JavaScript 正则基本语法
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/studyPage/vueV2Study.html" class="nav-link"><i class="undefined"></i>
+  Vue2 学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/studyPage/vueV3Study.html" class="nav-link"><i class="undefined"></i>
+  Vue3 学习笔记
+</a></li><li class="dropdown-item"><h4>App 开发</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/webDoc/views/studyPage/appDev/dartStudy.html" class="nav-link"><i class="undefined"></i>
+  Dart 语言基础
+</a></li><li class="dropdown-subitem"><a href="/webDoc/views/studyPage/appDev/flutterStudy.html" class="nav-link"><i class="undefined"></i>
+  Flutter 开发入门
+</a></li></ul></li><li class="dropdown-item"><h4>Express学习文档</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/webDoc/views/studyPage/express/expressDemo.html" class="nav-link"><i class="undefined"></i>
+  简单的express服务
+</a></li><li class="dropdown-subitem"><a href="/webDoc/views/studyPage/express/expressMiddleware.html" class="nav-link"><i class="undefined"></i>
+  express 中间件
+</a></li><li class="dropdown-subitem"><a href="/webDoc/views/studyPage/express/expressRoute.html" class="nav-link"><i class="undefined"></i>
+  express 路由中间件
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      问题记录
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/webDoc/views/ProblemRecord/JavaScriptAbout.html" class="nav-link"><i class="undefined"></i>
+  JavaScript 相关
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/ProblemRecord/VueAbout.html" class="nav-link"><i class="undefined"></i>
+  Vue 相关
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/ProblemRecord/CssAbout.html" class="nav-link"><i class="undefined"></i>
+  CSS 相关
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/ProblemRecord/HtmlAbout.html" class="nav-link"><i class="undefined"></i>
+  HTML 相关
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><img src="/webDoc/img/Maple_icon.png" alt="author-avatar" class="personal-img" data-v-1fad0c41> <!----> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>23</h3> <h6 data-v-1fad0c41>Articles</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>7</h3> <h6 data-v-1fad0c41>Tags</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/webDoc/" class="nav-link"><i class="undefined"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      AI学习
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>CaluedCode 学习</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/webDoc/views/aiStudyPage/claudeCode/claudeCodeInstall.html" class="nav-link"><i class="undefined"></i>
+  安装claude code
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/webDoc/views/aiStudyPage/ollama/ollamaDoc.html" aria-current="page" class="nav-link router-link-exact-active router-link-active"><i class="undefined"></i>
+  Ollama 使用指南
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/aiStudyPage/lmstudio/lmstudioDoc.html" class="nav-link"><i class="undefined"></i>
+  LM Studio 使用指南
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Util
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/webDoc/views/utilsPage/jsUtils.html" class="nav-link"><i class="undefined"></i>
+  JavaScript 工具封装
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/utilsPage/cssStyleReset.html" class="nav-link"><i class="undefined"></i>
+  CSS 样式重置
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/utilsPage/resource.html" class="nav-link"><i class="undefined"></i>
+  资源记录
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      开发规范
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/webDoc/views/projectSpecification/gitRelated/gitProcess.html" class="nav-link"><i class="undefined"></i>
+  git 操作流程
+</a></li><li class="dropdown-item"><h4>编码规范</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/webDoc/views/projectSpecification/codeSpecification/javaScriptCode.html" class="nav-link"><i class="undefined"></i>
+  JavaScript 规范
+</a></li><li class="dropdown-subitem"><a href="/webDoc/views/projectSpecification/codeSpecification/cssCode.html" class="nav-link"><i class="undefined"></i>
+  CSS 规范
+</a></li><li class="dropdown-subitem"><a href="/webDoc/views/projectSpecification/codeSpecification/htmlCode.html" class="nav-link"><i class="undefined"></i>
+  HTML 规范
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      学习
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/webDoc/views/studyPage/markdownStudy.html" class="nav-link"><i class="undefined"></i>
+  Markdown 基础语法
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/studyPage/regularExpression.html" class="nav-link"><i class="undefined"></i>
+  JavaScript 正则基本语法
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/studyPage/vueV2Study.html" class="nav-link"><i class="undefined"></i>
+  Vue2 学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/studyPage/vueV3Study.html" class="nav-link"><i class="undefined"></i>
+  Vue3 学习笔记
+</a></li><li class="dropdown-item"><h4>App 开发</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/webDoc/views/studyPage/appDev/dartStudy.html" class="nav-link"><i class="undefined"></i>
+  Dart 语言基础
+</a></li><li class="dropdown-subitem"><a href="/webDoc/views/studyPage/appDev/flutterStudy.html" class="nav-link"><i class="undefined"></i>
+  Flutter 开发入门
+</a></li></ul></li><li class="dropdown-item"><h4>Express学习文档</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/webDoc/views/studyPage/express/expressDemo.html" class="nav-link"><i class="undefined"></i>
+  简单的express服务
+</a></li><li class="dropdown-subitem"><a href="/webDoc/views/studyPage/express/expressMiddleware.html" class="nav-link"><i class="undefined"></i>
+  express 中间件
+</a></li><li class="dropdown-subitem"><a href="/webDoc/views/studyPage/express/expressRoute.html" class="nav-link"><i class="undefined"></i>
+  express 路由中间件
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      问题记录
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/webDoc/views/ProblemRecord/JavaScriptAbout.html" class="nav-link"><i class="undefined"></i>
+  JavaScript 相关
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/ProblemRecord/VueAbout.html" class="nav-link"><i class="undefined"></i>
+  Vue 相关
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/ProblemRecord/CssAbout.html" class="nav-link"><i class="undefined"></i>
+  CSS 相关
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/ProblemRecord/HtmlAbout.html" class="nav-link"><i class="undefined"></i>
+  HTML 相关
+</a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>AI学习</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>CaluedCode 学习</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/webDoc/views/aiStudyPage/claudeCode/claudeCodeInstall.html" class="sidebar-link">安装claude code</a></li></ul></section></li><li><a href="/webDoc/views/aiStudyPage/ollama/ollamaDoc.html" aria-current="page" class="active sidebar-link">Ollama 使用指南</a></li><li><a href="/webDoc/views/aiStudyPage/lmstudio/lmstudioDoc.html" class="sidebar-link">LM Studio 使用指南</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>Ollama 使用指南</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2026
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">Ollama 使用指南</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>Maple</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>3/15/2026</span></i> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h2 id="简介"><a href="#简介" class="header-anchor">#</a> 简介</h2> <p>Ollama 是一款本地大模型运行工具，支持在本地部署和运行 Llama 2、Mistral、Gemma 等开源大模型。</p> <p><strong>官网</strong>: <a href="https://ollama.com" target="_blank" rel="noopener noreferrer">https://ollama.com<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> <strong>GitHub</strong>: <a href="https://github.com/ollama/ollama" target="_blank" rel="noopener noreferrer">https://github.com/ollama/ollama<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <hr> <h2 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h2> <h3 id="macos"><a href="#macos" class="header-anchor">#</a> macOS</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 使用 Homebrew 安装</span>
+brew <span class="token function">install</span> ollama
+</code></pre></div><h3 id="linux"><a href="#linux" class="header-anchor">#</a> Linux</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 一键安装</span>
+<span class="token function">curl</span> <span class="token parameter variable">-fsSL</span> https://ollama.com/install.sh <span class="token operator">|</span> <span class="token function">sh</span>
+</code></pre></div><h3 id="windows"><a href="#windows" class="header-anchor">#</a> Windows</h3> <p>从 <a href="https://ollama.com/download" target="_blank" rel="noopener noreferrer">官网下载页<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 下载安装包，双击运行即可。</p> <hr> <h2 id="快速开始"><a href="#快速开始" class="header-anchor">#</a> 快速开始</h2> <h3 id="启动服务"><a href="#启动服务" class="header-anchor">#</a> 启动服务</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 启动 Ollama</span>
+ollama serve
+</code></pre></div><p>服务默认运行在 <code>http://localhost:11434</code></p> <h3 id="拉取模型"><a href="#拉取模型" class="header-anchor">#</a> 拉取模型</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 拉取 Llama 2</span>
+ollama pull llama2
+
+<span class="token comment"># 拉取 Mistral</span>
+ollama pull mistral
+
+<span class="token comment"># 拉取 Gemma</span>
+ollama pull gemma
+</code></pre></div><h3 id="运行模型"><a href="#运行模型" class="header-anchor">#</a> 运行模型</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 命令行交互</span>
+ollama run llama2
+
+<span class="token comment"># 示例输出</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> 你好，请介绍一下你自己
+我是 Llama <span class="token number">2</span>，由 Meta AI 训练的大型语言模型。我可以回答问题、提供信息和进行对话。
+</code></pre></div><hr> <h2 id="常用命令"><a href="#常用命令" class="header-anchor">#</a> 常用命令</h2> <table><thead><tr><th>命令</th> <th>说明</th></tr></thead> <tbody><tr><td><code>ollama serve</code></td> <td>启动服务</td></tr> <tr><td><code>ollama pull &lt;模型&gt;</code></td> <td>拉取模型</td></tr> <tr><td><code>ollama run &lt;模型&gt;</code></td> <td>运行模型</td></tr> <tr><td><code>ollama list</code></td> <td>列出已下载模型</td></tr> <tr><td><code>ollama rm &lt;模型&gt;</code></td> <td>删除模型</td></tr> <tr><td><code>ollama cp &lt;源&gt; &lt;目标&gt;</code></td> <td>复制模型</td></tr> <tr><td><code>ollama show &lt;模型&gt;</code></td> <td>查看模型信息</td></tr></tbody></table> <hr> <h2 id="api-调用"><a href="#api-调用" class="header-anchor">#</a> API 调用</h2> <h3 id="rest-api"><a href="#rest-api" class="header-anchor">#</a> REST API</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 对话接口</span>
+<span class="token function">curl</span> http://localhost:11434/api/chat <span class="token parameter variable">-d</span> <span class="token string">'{
+  &quot;model&quot;: &quot;llama2&quot;,
+  &quot;messages&quot;: [
+    { &quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;你好&quot; }
+  ]
+}'</span>
+
+<span class="token comment"># 生成接口</span>
+<span class="token function">curl</span> http://localhost:11434/api/generate <span class="token parameter variable">-d</span> <span class="token string">'{
+  &quot;model&quot;: &quot;llama2&quot;,
+  &quot;prompt&quot;: &quot;写一个 Python Hello World&quot;
+}'</span>
+</code></pre></div><h3 id="python-sdk"><a href="#python-sdk" class="header-anchor">#</a> Python SDK</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>pip <span class="token function">install</span> ollama
+</code></pre></div><div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">import</span> ollama
+
+<span class="token comment"># 对话</span>
+response <span class="token operator">=</span> ollama<span class="token punctuation">.</span>chat<span class="token punctuation">(</span>model<span class="token operator">=</span><span class="token string">'llama2'</span><span class="token punctuation">,</span> messages<span class="token operator">=</span><span class="token punctuation">[</span>
+    <span class="token punctuation">{</span><span class="token string">'role'</span><span class="token punctuation">:</span> <span class="token string">'user'</span><span class="token punctuation">,</span> <span class="token string">'content'</span><span class="token punctuation">:</span> <span class="token string">'你好'</span><span class="token punctuation">}</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>response<span class="token punctuation">[</span><span class="token string">'message'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'content'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 生成</span>
+response <span class="token operator">=</span> ollama<span class="token punctuation">.</span>generate<span class="token punctuation">(</span>model<span class="token operator">=</span><span class="token string">'llama2'</span><span class="token punctuation">,</span> prompt<span class="token operator">=</span><span class="token string">'写一个 JS 定时器'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>response<span class="token punctuation">[</span><span class="token string">'response'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="node-js-sdk"><a href="#node-js-sdk" class="header-anchor">#</a> Node.js SDK</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">npm</span> <span class="token function">install</span> ollama
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> Ollama <span class="token keyword">from</span> <span class="token string">'ollama'</span>
+
+<span class="token comment">// 对话</span>
+<span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> Ollama<span class="token punctuation">.</span><span class="token function">chat</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">model</span><span class="token operator">:</span> <span class="token string">'llama2'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">messages</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> <span class="token literal-property property">role</span><span class="token operator">:</span> <span class="token string">'user'</span><span class="token punctuation">,</span> <span class="token literal-property property">content</span><span class="token operator">:</span> <span class="token string">'你好'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>message<span class="token punctuation">.</span>content<span class="token punctuation">)</span>
+</code></pre></div><hr> <h2 id="模型列表"><a href="#模型列表" class="header-anchor">#</a> 模型列表</h2> <h3 id="热门模型"><a href="#热门模型" class="header-anchor">#</a> 热门模型</h3> <table><thead><tr><th>模型</th> <th>大小</th> <th>说明</th></tr></thead> <tbody><tr><td>llama2</td> <td>3.8GB</td> <td>Meta 开源模型，适合通用对话</td></tr> <tr><td>mistral</td> <td>4.1GB</td> <td>高性能稀疏 mixture-of-experts</td></tr> <tr><td>gemma</td> <td>2GB</td> <td>Google 轻量级模型</td></tr> <tr><td>codellama</td> <td>3.8GB</td> <td>代码专用模型</td></tr> <tr><td>neural-chat</td> <td>4.1GB</td> <td>优化对话体验</td></tr></tbody></table> <h3 id="查看更多模型"><a href="#查看更多模型" class="header-anchor">#</a> 查看更多模型</h3> <p>访问 <a href="https://ollama.com/library" target="_blank" rel="noopener noreferrer">https://ollama.com/library<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 浏览全部模型。</p> <hr> <h2 id="自定义模型"><a href="#自定义模型" class="header-anchor">#</a> 自定义模型</h2> <h3 id="导入已有模型"><a href="#导入已有模型" class="header-anchor">#</a> 导入已有模型</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 从 Safetensors 格式导入</span>
+ollama create custom-model <span class="token parameter variable">-f</span> /path/to/model
+</code></pre></div><h3 id="modelfile-配置"><a href="#modelfile-配置" class="header-anchor">#</a> Modelfile 配置</h3> <p>创建 <code>Modelfile</code> 自定义模型行为：</p> <div class="language-dockerfile extra-class"><pre class="language-dockerfile"><code><span class="token instruction"><span class="token keyword">FROM</span> llama2</span>
+
+<span class="token comment"># 设置系统提示</span>
+SYSTEM &quot;&quot;&quot;
+你是一个专业的 Python 程序员，只回答 Python 相关问题。
+&quot;&quot;&quot;
+
+<span class="token comment"># 设置参数</span>
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+
+<span class="token comment"># 安装初始 prompt</span>
+MESSAGE user 你好，请介绍一下自己
+MESSAGE assistant 你好！我是一个 Python 编程助手。
+</code></pre></div><div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 创建自定义模型</span>
+ollama create python-assistant <span class="token parameter variable">-f</span> Modelfile
+
+<span class="token comment"># 运行</span>
+ollama run python-assistant
+</code></pre></div><hr> <h2 id="常见问题"><a href="#常见问题" class="header-anchor">#</a> 常见问题</h2> <h3 id="显存不足"><a href="#显存不足" class="header-anchor">#</a> 显存不足</h3> <p>模型需要足够内存，建议：</p> <ul><li>Llama 2 7B: 至少 8GB 显存/内存</li> <li>Mistral 7B: 至少 8GB 显存/内存</li> <li>Gemma 2B: 至少 4GB 显存/内存</li></ul> <h3 id="推理速度慢"><a href="#推理速度慢" class="header-anchor">#</a> 推理速度慢</h3> <ul><li>使用量化模型（q4_0, q4_1, q5_1 等）</li> <li>关闭其他占用内存的程序</li> <li>使用 GPU 加速（NVIDIA GPU + CUDA）</li></ul> <h3 id="后台运行"><a href="#后台运行" class="header-anchor">#</a> 后台运行</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># Linux/macOS 后台启动</span>
+<span class="token function">nohup</span> ollama serve <span class="token operator">&gt;</span> ollama.log <span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span><span class="token file-descriptor important">&amp;1</span> <span class="token operator">&amp;</span>
+
+<span class="token comment"># Windows 使用任务计划程序或 nssm</span>
+</code></pre></div><hr> <h2 id="配置"><a href="#配置" class="header-anchor">#</a> 配置</h2> <h3 id="存储位置"><a href="#存储位置" class="header-anchor">#</a> 存储位置</h3> <table><thead><tr><th>系统</th> <th>路径</th></tr></thead> <tbody><tr><td>macOS</td> <td><code>~/.ollama</code></td></tr> <tr><td>Linux</td> <td><code>~/.ollama</code></td></tr> <tr><td>Windows</td> <td><code>C:\Users\&lt;用户&gt;\.ollama</code></td></tr></tbody></table> <h3 id="环境变量"><a href="#环境变量" class="header-anchor">#</a> 环境变量</h3> <table><thead><tr><th>变量</th> <th>说明</th> <th>默认值</th></tr></thead> <tbody><tr><td><code>OLLAMA_HOST</code></td> <td>服务地址</td> <td><code>127.0.0.1:11434</code></td></tr> <tr><td><code>OLLAMA_MODELS</code></td> <td>模型存储路径</td> <td><code>~/.ollama/models</code></td></tr> <tr><td><code>OLLAMA_NUM_PARALLEL</code></td> <td>并行数量</td> <td><code>1</code></td></tr> <tr><td><code>OLLAMA_MAX_LOADED_MODELS</code></td> <td>最大加载模型数</td> <td><code>1</code></td></tr></tbody></table></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/webDoc/views/aiStudyPage/claudeCode/claudeCodeInstall.html" class="prev">
+          安装claude code
+        </a></span> <span class="next"><a href="/webDoc/views/aiStudyPage/lmstudio/lmstudioDoc.html">
+          LM Studio 使用指南
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/webDoc/views/aiStudyPage/ollama/ollamaDoc.html#简介" class="sidebar-link reco-side-简介" data-v-b57cc07c>简介</a></li><li class="level-2" data-v-b57cc07c><a href="/webDoc/views/aiStudyPage/ollama/ollamaDoc.html#安装" class="sidebar-link reco-side-安装" data-v-b57cc07c>安装</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/aiStudyPage/ollama/ollamaDoc.html#macos" class="sidebar-link reco-side-macos" data-v-b57cc07c>macOS</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/aiStudyPage/ollama/ollamaDoc.html#linux" class="sidebar-link reco-side-linux" data-v-b57cc07c>Linux</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/aiStudyPage/ollama/ollamaDoc.html#windows" class="sidebar-link reco-side-windows" data-v-b57cc07c>Windows</a></li><li class="level-2" data-v-b57cc07c><a href="/webDoc/views/aiStudyPage/ollama/ollamaDoc.html#快速开始" class="sidebar-link reco-side-快速开始" data-v-b57cc07c>快速开始</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/aiStudyPage/ollama/ollamaDoc.html#启动服务" class="sidebar-link reco-side-启动服务" data-v-b57cc07c>启动服务</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/aiStudyPage/ollama/ollamaDoc.html#拉取模型" class="sidebar-link reco-side-拉取模型" data-v-b57cc07c>拉取模型</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/aiStudyPage/ollama/ollamaDoc.html#运行模型" class="sidebar-link reco-side-运行模型" data-v-b57cc07c>运行模型</a></li><li class="level-2" data-v-b57cc07c><a href="/webDoc/views/aiStudyPage/ollama/ollamaDoc.html#常用命令" class="sidebar-link reco-side-常用命令" data-v-b57cc07c>常用命令</a></li><li class="level-2" data-v-b57cc07c><a href="/webDoc/views/aiStudyPage/ollama/ollamaDoc.html#api-调用" class="sidebar-link reco-side-api-调用" data-v-b57cc07c>API 调用</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/aiStudyPage/ollama/ollamaDoc.html#rest-api" class="sidebar-link reco-side-rest-api" data-v-b57cc07c>REST API</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/aiStudyPage/ollama/ollamaDoc.html#python-sdk" class="sidebar-link reco-side-python-sdk" data-v-b57cc07c>Python SDK</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/aiStudyPage/ollama/ollamaDoc.html#node-js-sdk" class="sidebar-link reco-side-node-js-sdk" data-v-b57cc07c>Node.js SDK</a></li><li class="level-2" data-v-b57cc07c><a href="/webDoc/views/aiStudyPage/ollama/ollamaDoc.html#模型列表" class="sidebar-link reco-side-模型列表" data-v-b57cc07c>模型列表</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/aiStudyPage/ollama/ollamaDoc.html#热门模型" class="sidebar-link reco-side-热门模型" data-v-b57cc07c>热门模型</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/aiStudyPage/ollama/ollamaDoc.html#查看更多模型" class="sidebar-link reco-side-查看更多模型" data-v-b57cc07c>查看更多模型</a></li><li class="level-2" data-v-b57cc07c><a href="/webDoc/views/aiStudyPage/ollama/ollamaDoc.html#自定义模型" class="sidebar-link reco-side-自定义模型" data-v-b57cc07c>自定义模型</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/aiStudyPage/ollama/ollamaDoc.html#导入已有模型" class="sidebar-link reco-side-导入已有模型" data-v-b57cc07c>导入已有模型</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/aiStudyPage/ollama/ollamaDoc.html#modelfile-配置" class="sidebar-link reco-side-modelfile-配置" data-v-b57cc07c>Modelfile 配置</a></li><li class="level-2" data-v-b57cc07c><a href="/webDoc/views/aiStudyPage/ollama/ollamaDoc.html#常见问题" class="sidebar-link reco-side-常见问题" data-v-b57cc07c>常见问题</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/aiStudyPage/ollama/ollamaDoc.html#显存不足" class="sidebar-link reco-side-显存不足" data-v-b57cc07c>显存不足</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/aiStudyPage/ollama/ollamaDoc.html#推理速度慢" class="sidebar-link reco-side-推理速度慢" data-v-b57cc07c>推理速度慢</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/aiStudyPage/ollama/ollamaDoc.html#后台运行" class="sidebar-link reco-side-后台运行" data-v-b57cc07c>后台运行</a></li><li class="level-2" data-v-b57cc07c><a href="/webDoc/views/aiStudyPage/ollama/ollamaDoc.html#配置" class="sidebar-link reco-side-配置" data-v-b57cc07c>配置</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/aiStudyPage/ollama/ollamaDoc.html#存储位置" class="sidebar-link reco-side-存储位置" data-v-b57cc07c>存储位置</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/aiStudyPage/ollama/ollamaDoc.html#环境变量" class="sidebar-link reco-side-环境变量" data-v-b57cc07c>环境变量</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div><div class="kanbanniang" data-v-5775ee02><div class="banniang-container" style="display:;" data-v-5775ee02><div class="messageBox" style="right:68px;bottom:190px;display:none;" data-v-5775ee02>
+      欢迎来到 Maple
+    </div> <div class="operation" style="right:90px;bottom:40px;display:;" data-v-5775ee02><i class="kbnfont kbn-ban-home ban-home" data-v-5775ee02></i> <i class="kbnfont kbn-ban-message message" data-v-5775ee02></i> <i class="kbnfont kbn-ban-close close" data-v-5775ee02></i> <a target="_blank" href="https://vuepress-theme-reco.recoluan.com/views/plugins/kanbanniang.html" data-v-5775ee02><i class="kbnfont kbn-ban-info info" data-v-5775ee02></i></a> <i class="kbnfont kbn-ban-theme skin" style="display:;" data-v-5775ee02></i></div> <canvas id="banniang" width="150" height="220" class="live2d" style="right:90px;bottom:-20px;opacity:0.9;" data-v-5775ee02></canvas></div> <div class="showBanNiang" style="display:none;" data-v-5775ee02>
+    看板娘
+  </div></div></div></div>
+    <script src="/webDoc/assets/js/app.3f5d470f.js" defer></script><script src="/webDoc/assets/js/7.8061b6b1.js" defer></script><script src="/webDoc/assets/js/2.a3cee522.js" defer></script><script src="/webDoc/assets/js/1.50eccc97.js" defer></script><script src="/webDoc/assets/js/48.aa5ccc11.js" defer></script>
+  </body>
+</html>

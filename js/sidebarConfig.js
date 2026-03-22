@@ -14,6 +14,14 @@ module.exports = {
                         },
                     ]
                 },
+                {
+                    title: "Ollama 使用指南",
+                    path: "/views/aiStudyPage/ollama/ollamaDoc",
+                },
+                {
+                    title: "LM Studio 使用指南",
+                    path: "/views/aiStudyPage/lmstudio/lmstudioDoc",
+                },
             ],
         },
     ],
@@ -68,7 +76,7 @@ module.exports = {
             ]
         },
     ],
-    // 学习 
+    // 学习
     '/views/studyPage': [
         {
             title: '学习',
@@ -81,6 +89,28 @@ module.exports = {
                 {
                     title: "JavaScript 正则基本语法",
                     path: "/views/studyPage/regularExpression",
+                },
+                {
+                    title: "Vue2 学习笔记",
+                    path: "/views/studyPage/vueV2Study",
+                },
+                {
+                    title: "Vue3 学习笔记",
+                    path: "/views/studyPage/vueV3Study",
+                },
+                {
+                    title: "App 开发",
+                    collapsable: true,
+                    children: [
+                        {
+                            title: "Dart 语言基础",
+                            path: "/views/studyPage/appDev/dartStudy",
+                        },
+                        {
+                            title: "Flutter 开发入门",
+                            path: "/views/studyPage/appDev/flutterStudy",
+                        },
+                    ],
                 },
                 {
                     title: "express学习文档",
@@ -116,6 +146,14 @@ module.exports = {
                 {
                     title: "Vue 相关",
                     path: "/views/ProblemRecord/VueAbout",
+                },
+                {
+                    title: "CSS 相关",
+                    path: "/views/ProblemRecord/CssAbout",
+                },
+                {
+                    title: "HTML 相关",
+                    path: "/views/ProblemRecord/HtmlAbout",
                 },
             ],
         }

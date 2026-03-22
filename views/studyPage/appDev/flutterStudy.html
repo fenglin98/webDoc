@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Flutter 开发入门 | Maple</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="Flutter 跨平台应用开发学习">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
+    
+    <link rel="preload" href="/webDoc/assets/css/0.styles.082097fb.css" as="style"><link rel="preload" href="/webDoc/assets/js/app.3f5d470f.js" as="script"><link rel="preload" href="/webDoc/assets/js/7.8061b6b1.js" as="script"><link rel="preload" href="/webDoc/assets/js/2.a3cee522.js" as="script"><link rel="preload" href="/webDoc/assets/js/1.50eccc97.js" as="script"><link rel="preload" href="/webDoc/assets/js/53.23ae6434.js" as="script"><link rel="prefetch" href="/webDoc/assets/js/10.7157a5d0.js"><link rel="prefetch" href="/webDoc/assets/js/11.d046051a.js"><link rel="prefetch" href="/webDoc/assets/js/14.ce099804.js"><link rel="prefetch" href="/webDoc/assets/js/15.6ac51fc2.js"><link rel="prefetch" href="/webDoc/assets/js/16.db3347c7.js"><link rel="prefetch" href="/webDoc/assets/js/17.37902c1f.js"><link rel="prefetch" href="/webDoc/assets/js/18.cdc2813e.js"><link rel="prefetch" href="/webDoc/assets/js/19.b490b2e7.js"><link rel="prefetch" href="/webDoc/assets/js/20.66529de1.js"><link rel="prefetch" href="/webDoc/assets/js/21.bb88374f.js"><link rel="prefetch" href="/webDoc/assets/js/22.99e380db.js"><link rel="prefetch" href="/webDoc/assets/js/23.794d1902.js"><link rel="prefetch" href="/webDoc/assets/js/24.cd07dfbc.js"><link rel="prefetch" href="/webDoc/assets/js/25.5f70a5da.js"><link rel="prefetch" href="/webDoc/assets/js/26.2ead4332.js"><link rel="prefetch" href="/webDoc/assets/js/27.d527ac50.js"><link rel="prefetch" href="/webDoc/assets/js/28.e2932b03.js"><link rel="prefetch" href="/webDoc/assets/js/29.498e6e76.js"><link rel="prefetch" href="/webDoc/assets/js/3.0679a152.js"><link rel="prefetch" href="/webDoc/assets/js/30.67ecaf7d.js"><link rel="prefetch" href="/webDoc/assets/js/31.e61f14c1.js"><link rel="prefetch" href="/webDoc/assets/js/32.0f03ad64.js"><link rel="prefetch" href="/webDoc/assets/js/33.1fddd75f.js"><link rel="prefetch" href="/webDoc/assets/js/34.1cc10c6d.js"><link rel="prefetch" href="/webDoc/assets/js/35.426bde68.js"><link rel="prefetch" href="/webDoc/assets/js/36.4de940dd.js"><link rel="prefetch" href="/webDoc/assets/js/37.90ab3c54.js"><link rel="prefetch" href="/webDoc/assets/js/38.fb92076c.js"><link rel="prefetch" href="/webDoc/assets/js/39.db357443.js"><link rel="prefetch" href="/webDoc/assets/js/4.69920340.js"><link rel="prefetch" href="/webDoc/assets/js/40.7ed6f13d.js"><link rel="prefetch" href="/webDoc/assets/js/41.b46ff50f.js"><link rel="prefetch" href="/webDoc/assets/js/42.3b82fd67.js"><link rel="prefetch" href="/webDoc/assets/js/43.d52c9d0c.js"><link rel="prefetch" href="/webDoc/assets/js/44.b3687642.js"><link rel="prefetch" href="/webDoc/assets/js/45.73ef25f0.js"><link rel="prefetch" href="/webDoc/assets/js/46.6c030e68.js"><link rel="prefetch" href="/webDoc/assets/js/47.5ae79c3f.js"><link rel="prefetch" href="/webDoc/assets/js/48.aa5ccc11.js"><link rel="prefetch" href="/webDoc/assets/js/49.c9446703.js"><link rel="prefetch" href="/webDoc/assets/js/5.39941ce7.js"><link rel="prefetch" href="/webDoc/assets/js/50.96bdeb98.js"><link rel="prefetch" href="/webDoc/assets/js/51.95e6bfdc.js"><link rel="prefetch" href="/webDoc/assets/js/52.4b7090db.js"><link rel="prefetch" href="/webDoc/assets/js/54.9a733eb7.js"><link rel="prefetch" href="/webDoc/assets/js/55.1ff430b6.js"><link rel="prefetch" href="/webDoc/assets/js/56.8ca48557.js"><link rel="prefetch" href="/webDoc/assets/js/57.153ef1df.js"><link rel="prefetch" href="/webDoc/assets/js/58.f9ba7a48.js"><link rel="prefetch" href="/webDoc/assets/js/59.5a3a0707.js"><link rel="prefetch" href="/webDoc/assets/js/6.4c7dc840.js"><link rel="prefetch" href="/webDoc/assets/js/60.581fbd17.js"><link rel="prefetch" href="/webDoc/assets/js/61.45ebcaec.js"><link rel="prefetch" href="/webDoc/assets/js/8.f9c1c1a8.js"><link rel="prefetch" href="/webDoc/assets/js/9.a096c348.js"><link rel="prefetch" href="/webDoc/assets/js/vendors~docsearch.0feec34c.js">
+    <link rel="stylesheet" href="/webDoc/assets/css/0.styles.082097fb.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>Maple</h3> <p class="description" data-v-59e6cb88></p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2026
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/webDoc/" class="home-link router-link-active"><img src="/webDoc/img/Maple_icon.png" alt="Maple" class="logo"> <span class="site-name">Maple</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/webDoc/" class="nav-link"><i class="undefined"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      AI学习
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>CaluedCode 学习</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/webDoc/views/aiStudyPage/claudeCode/claudeCodeInstall.html" class="nav-link"><i class="undefined"></i>
+  安装claude code
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/webDoc/views/aiStudyPage/ollama/ollamaDoc.html" class="nav-link"><i class="undefined"></i>
+  Ollama 使用指南
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/aiStudyPage/lmstudio/lmstudioDoc.html" class="nav-link"><i class="undefined"></i>
+  LM Studio 使用指南
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Util
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/webDoc/views/utilsPage/jsUtils.html" class="nav-link"><i class="undefined"></i>
+  JavaScript 工具封装
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/utilsPage/cssStyleReset.html" class="nav-link"><i class="undefined"></i>
+  CSS 样式重置
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/utilsPage/resource.html" class="nav-link"><i class="undefined"></i>
+  资源记录
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      开发规范
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/webDoc/views/projectSpecification/gitRelated/gitProcess.html" class="nav-link"><i class="undefined"></i>
+  git 操作流程
+</a></li><li class="dropdown-item"><h4>编码规范</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/webDoc/views/projectSpecification/codeSpecification/javaScriptCode.html" class="nav-link"><i class="undefined"></i>
+  JavaScript 规范
+</a></li><li class="dropdown-subitem"><a href="/webDoc/views/projectSpecification/codeSpecification/cssCode.html" class="nav-link"><i class="undefined"></i>
+  CSS 规范
+</a></li><li class="dropdown-subitem"><a href="/webDoc/views/projectSpecification/codeSpecification/htmlCode.html" class="nav-link"><i class="undefined"></i>
+  HTML 规范
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      学习
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/webDoc/views/studyPage/markdownStudy.html" class="nav-link"><i class="undefined"></i>
+  Markdown 基础语法
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/studyPage/regularExpression.html" class="nav-link"><i class="undefined"></i>
+  JavaScript 正则基本语法
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/studyPage/vueV2Study.html" class="nav-link"><i class="undefined"></i>
+  Vue2 学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/studyPage/vueV3Study.html" class="nav-link"><i class="undefined"></i>
+  Vue3 学习笔记
+</a></li><li class="dropdown-item"><h4>App 开发</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/webDoc/views/studyPage/appDev/dartStudy.html" class="nav-link"><i class="undefined"></i>
+  Dart 语言基础
+</a></li><li class="dropdown-subitem"><a href="/webDoc/views/studyPage/appDev/flutterStudy.html" aria-current="page" class="nav-link router-link-exact-active router-link-active"><i class="undefined"></i>
+  Flutter 开发入门
+</a></li></ul></li><li class="dropdown-item"><h4>Express学习文档</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/webDoc/views/studyPage/express/expressDemo.html" class="nav-link"><i class="undefined"></i>
+  简单的express服务
+</a></li><li class="dropdown-subitem"><a href="/webDoc/views/studyPage/express/expressMiddleware.html" class="nav-link"><i class="undefined"></i>
+  express 中间件
+</a></li><li class="dropdown-subitem"><a href="/webDoc/views/studyPage/express/expressRoute.html" class="nav-link"><i class="undefined"></i>
+  express 路由中间件
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      问题记录
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/webDoc/views/ProblemRecord/JavaScriptAbout.html" class="nav-link"><i class="undefined"></i>
+  JavaScript 相关
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/ProblemRecord/VueAbout.html" class="nav-link"><i class="undefined"></i>
+  Vue 相关
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/ProblemRecord/CssAbout.html" class="nav-link"><i class="undefined"></i>
+  CSS 相关
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/ProblemRecord/HtmlAbout.html" class="nav-link"><i class="undefined"></i>
+  HTML 相关
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><img src="/webDoc/img/Maple_icon.png" alt="author-avatar" class="personal-img" data-v-1fad0c41> <!----> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>23</h3> <h6 data-v-1fad0c41>Articles</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>7</h3> <h6 data-v-1fad0c41>Tags</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/webDoc/" class="nav-link"><i class="undefined"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      AI学习
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>CaluedCode 学习</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/webDoc/views/aiStudyPage/claudeCode/claudeCodeInstall.html" class="nav-link"><i class="undefined"></i>
+  安装claude code
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/webDoc/views/aiStudyPage/ollama/ollamaDoc.html" class="nav-link"><i class="undefined"></i>
+  Ollama 使用指南
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/aiStudyPage/lmstudio/lmstudioDoc.html" class="nav-link"><i class="undefined"></i>
+  LM Studio 使用指南
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Util
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/webDoc/views/utilsPage/jsUtils.html" class="nav-link"><i class="undefined"></i>
+  JavaScript 工具封装
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/utilsPage/cssStyleReset.html" class="nav-link"><i class="undefined"></i>
+  CSS 样式重置
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/utilsPage/resource.html" class="nav-link"><i class="undefined"></i>
+  资源记录
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      开发规范
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/webDoc/views/projectSpecification/gitRelated/gitProcess.html" class="nav-link"><i class="undefined"></i>
+  git 操作流程
+</a></li><li class="dropdown-item"><h4>编码规范</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/webDoc/views/projectSpecification/codeSpecification/javaScriptCode.html" class="nav-link"><i class="undefined"></i>
+  JavaScript 规范
+</a></li><li class="dropdown-subitem"><a href="/webDoc/views/projectSpecification/codeSpecification/cssCode.html" class="nav-link"><i class="undefined"></i>
+  CSS 规范
+</a></li><li class="dropdown-subitem"><a href="/webDoc/views/projectSpecification/codeSpecification/htmlCode.html" class="nav-link"><i class="undefined"></i>
+  HTML 规范
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      学习
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/webDoc/views/studyPage/markdownStudy.html" class="nav-link"><i class="undefined"></i>
+  Markdown 基础语法
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/studyPage/regularExpression.html" class="nav-link"><i class="undefined"></i>
+  JavaScript 正则基本语法
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/studyPage/vueV2Study.html" class="nav-link"><i class="undefined"></i>
+  Vue2 学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/studyPage/vueV3Study.html" class="nav-link"><i class="undefined"></i>
+  Vue3 学习笔记
+</a></li><li class="dropdown-item"><h4>App 开发</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/webDoc/views/studyPage/appDev/dartStudy.html" class="nav-link"><i class="undefined"></i>
+  Dart 语言基础
+</a></li><li class="dropdown-subitem"><a href="/webDoc/views/studyPage/appDev/flutterStudy.html" aria-current="page" class="nav-link router-link-exact-active router-link-active"><i class="undefined"></i>
+  Flutter 开发入门
+</a></li></ul></li><li class="dropdown-item"><h4>Express学习文档</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/webDoc/views/studyPage/express/expressDemo.html" class="nav-link"><i class="undefined"></i>
+  简单的express服务
+</a></li><li class="dropdown-subitem"><a href="/webDoc/views/studyPage/express/expressMiddleware.html" class="nav-link"><i class="undefined"></i>
+  express 中间件
+</a></li><li class="dropdown-subitem"><a href="/webDoc/views/studyPage/express/expressRoute.html" class="nav-link"><i class="undefined"></i>
+  express 路由中间件
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      问题记录
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/webDoc/views/ProblemRecord/JavaScriptAbout.html" class="nav-link"><i class="undefined"></i>
+  JavaScript 相关
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/ProblemRecord/VueAbout.html" class="nav-link"><i class="undefined"></i>
+  Vue 相关
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/ProblemRecord/CssAbout.html" class="nav-link"><i class="undefined"></i>
+  CSS 相关
+</a></li><li class="dropdown-item"><!----> <a href="/webDoc/views/ProblemRecord/HtmlAbout.html" class="nav-link"><i class="undefined"></i>
+  HTML 相关
+</a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>学习</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/webDoc/views/studyPage/markdownStudy.html" class="sidebar-link">Markdown 基础语法</a></li><li><a href="/webDoc/views/studyPage/regularExpression.html" class="sidebar-link">JavaScript 正则基本语法</a></li><li><a href="/webDoc/views/studyPage/vueV2Study.html" class="sidebar-link">Vue2 学习笔记</a></li><li><a href="/webDoc/views/studyPage/vueV3Study.html" class="sidebar-link">Vue3 学习笔记</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>App 开发</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/webDoc/views/studyPage/appDev/dartStudy.html" class="sidebar-link">Dart 语言基础</a></li><li><a href="/webDoc/views/studyPage/appDev/flutterStudy.html" aria-current="page" class="active sidebar-link">Flutter 开发入门</a></li></ul></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>express学习文档</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>Flutter 开发入门</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2026
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">Flutter 开发入门</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>Maple</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>3/15/2026</span></i> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h2 id="概述"><a href="#概述" class="header-anchor">#</a> 概述</h2> <p>Flutter 是 Google 开发的跨平台 UI 框架，使用 Dart 语言。</p> <p><strong>特点</strong>：</p> <ul><li>高性能渲染（Skia 引擎）</li> <li>跨平台（iOS、Android、Web、Desktop）</li> <li>热重载开发</li> <li>丰富的 Widget 库</li> <li>自定义设计</li></ul> <p><strong>官网</strong>: <a href="https://flutter.dev" target="_blank" rel="noopener noreferrer">https://flutter.dev<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <hr> <h2 id="环境搭建"><a href="#环境搭建" class="header-anchor">#</a> 环境搭建</h2> <h3 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h3> <ol><li>下载 Flutter SDK：<a href="https://flutter.dev/sdk" target="_blank" rel="noopener noreferrer">https://flutter.dev/sdk<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li>配置环境变量 PATH</li> <li>运行 <code>flutter doctor</code> 检查环境</li></ol> <h3 id="ide-配置"><a href="#ide-配置" class="header-anchor">#</a> IDE 配置</h3> <p>推荐使用 VS Code 或 Android Studio：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># VS Code 扩展</span>
+<span class="token comment"># Flutter、Dart</span>
+
+<span class="token comment"># Android Studio 插件</span>
+<span class="token comment"># Flutter、Dart</span>
+</code></pre></div><h3 id="创建项目"><a href="#创建项目" class="header-anchor">#</a> 创建项目</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>flutter create my_app
+<span class="token builtin class-name">cd</span> my_app
+flutter run
+</code></pre></div><hr> <h2 id="基础概念"><a href="#基础概念" class="header-anchor">#</a> 基础概念</h2> <h3 id="widget-简介"><a href="#widget-简介" class="header-anchor">#</a> Widget 简介</h3> <p>Flutter 中一切皆 Widget：</p> <div class="language-dart extra-class"><pre class="language-dart"><code><span class="token comment">// 基础 Widget</span>
+<span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Hello Flutter'</span></span><span class="token punctuation">)</span>           <span class="token comment">// 文本</span>
+<span class="token class-name">Icon</span><span class="token punctuation">(</span><span class="token class-name">Icons</span><span class="token punctuation">.</span>star<span class="token punctuation">)</span>                 <span class="token comment">// 图标</span>
+<span class="token class-name">Image</span><span class="token punctuation">.</span><span class="token function">network</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'url'</span></span><span class="token punctuation">)</span>             <span class="token comment">// 网络图片</span>
+<span class="token class-name">ElevatedButton</span><span class="token punctuation">(</span>onPressed<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token comment">// 按钮</span>
+</code></pre></div><h3 id="组件分类"><a href="#组件分类" class="header-anchor">#</a> 组件分类</h3> <table><thead><tr><th>类型</th> <th>说明</th> <th>示例</th></tr></thead> <tbody><tr><td>有状态 Widget</td> <td>可变状态</td> <td><code>StatefulWidget</code></td></tr> <tr><td>无状态 Widget</td> <td>不可变</td> <td><code>StatelessWidget</code></td></tr> <tr><td>渲染 Widget</td> <td>绘制内容</td> <td><code>Text</code>、<code>Image</code></td></tr> <tr><td>布局 Widget</td> <td>排列子组件</td> <td><code>Column</code>、<code>Row</code></td></tr> <tr><td>容器 Widget</td> <td>添加样式</td> <td><code>Container</code>、<code>Padding</code></td></tr></tbody></table> <hr> <h2 id="基础组件"><a href="#基础组件" class="header-anchor">#</a> 基础组件</h2> <h3 id="文本与样式"><a href="#文本与样式" class="header-anchor">#</a> 文本与样式</h3> <div class="language-dart extra-class"><pre class="language-dart"><code><span class="token class-name">Text</span><span class="token punctuation">(</span>
+  <span class="token string-literal"><span class="token string">'Hello Flutter'</span></span><span class="token punctuation">,</span>
+  style<span class="token punctuation">:</span> <span class="token class-name">TextStyle</span><span class="token punctuation">(</span>
+    fontSize<span class="token punctuation">:</span> <span class="token number">24</span><span class="token punctuation">,</span>
+    fontWeight<span class="token punctuation">:</span> <span class="token class-name">FontWeight</span><span class="token punctuation">.</span>bold<span class="token punctuation">,</span>
+    color<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>blue<span class="token punctuation">,</span>
+  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+
+<span class="token comment">// 富文本</span>
+<span class="token class-name">Text</span><span class="token punctuation">.</span><span class="token function">rich</span><span class="token punctuation">(</span>
+  <span class="token class-name">TextSpan</span><span class="token punctuation">(</span>
+    children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token class-name">TextSpan</span><span class="token punctuation">(</span>text<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">'Hello '</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token class-name">TextSpan</span><span class="token punctuation">(</span>text<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">'Flutter'</span></span><span class="token punctuation">,</span> style<span class="token punctuation">:</span> <span class="token class-name">TextStyle</span><span class="token punctuation">(</span>fontWeight<span class="token punctuation">:</span> <span class="token class-name">FontWeight</span><span class="token punctuation">.</span>bold<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+</code></pre></div><h3 id="按钮"><a href="#按钮" class="header-anchor">#</a> 按钮</h3> <div class="language-dart extra-class"><pre class="language-dart"><code><span class="token comment">// 普通按钮</span>
+<span class="token class-name">ElevatedButton</span><span class="token punctuation">(</span>
+  onPressed<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  child<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'提交'</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+
+<span class="token comment">// 文字按钮</span>
+<span class="token class-name">TextButton</span><span class="token punctuation">(</span>onPressed<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> child<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'取消'</span></span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 图标按钮</span>
+<span class="token class-name">IconButton</span><span class="token punctuation">(</span>icon<span class="token punctuation">:</span> <span class="token class-name">Icon</span><span class="token punctuation">(</span><span class="token class-name">Icons</span><span class="token punctuation">.</span>star<span class="token punctuation">)</span><span class="token punctuation">,</span> onPressed<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 浮动按钮</span>
+<span class="token class-name">FloatingActionButton</span><span class="token punctuation">(</span>onPressed<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> child<span class="token punctuation">:</span> <span class="token class-name">Icon</span><span class="token punctuation">(</span><span class="token class-name">Icons</span><span class="token punctuation">.</span>add<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="图片"><a href="#图片" class="header-anchor">#</a> 图片</h3> <div class="language-dart extra-class"><pre class="language-dart"><code><span class="token comment">// 网络图片</span>
+<span class="token class-name">Image</span><span class="token punctuation">.</span><span class="token function">network</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'https://example.com/image.png'</span></span><span class="token punctuation">)</span>
+
+<span class="token comment">// 本地图片（需配置 pubspec.yaml）</span>
+<span class="token class-name">Image</span><span class="token punctuation">.</span><span class="token function">asset</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'assets/images/logo.png'</span></span><span class="token punctuation">)</span>
+
+<span class="token comment">// 圆角图片</span>
+<span class="token class-name">ClipRRect</span><span class="token punctuation">(</span>
+  borderRadius<span class="token punctuation">:</span> <span class="token class-name">BorderRadius</span><span class="token punctuation">.</span><span class="token function">circular</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  child<span class="token punctuation">:</span> <span class="token class-name">Image</span><span class="token punctuation">.</span><span class="token function">network</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'url'</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+</code></pre></div><hr> <h2 id="布局组件"><a href="#布局组件" class="header-anchor">#</a> 布局组件</h2> <h3 id="线性布局"><a href="#线性布局" class="header-anchor">#</a> 线性布局</h3> <div class="language-dart extra-class"><pre class="language-dart"><code><span class="token comment">// 垂直排列</span>
+<span class="token class-name">Column</span><span class="token punctuation">(</span>
+  children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Item 1'</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Item 2'</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+
+<span class="token comment">// 水平排列</span>
+<span class="token class-name">Row</span><span class="token punctuation">(</span>
+  children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token class-name">Icon</span><span class="token punctuation">(</span><span class="token class-name">Icons</span><span class="token punctuation">.</span>star<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Rating'</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+
+<span class="token comment">// 主轴对齐</span>
+<span class="token class-name">Row</span><span class="token punctuation">(</span>
+  mainAxisAlignment<span class="token punctuation">:</span> <span class="token class-name">MainAxisAlignment</span><span class="token punctuation">.</span>spaceBetween<span class="token punctuation">,</span>
+  children<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+
+<span class="token comment">// 交叉轴对齐</span>
+<span class="token class-name">Row</span><span class="token punctuation">(</span>
+  crossAxisAlignment<span class="token punctuation">:</span> <span class="token class-name">CrossAxisAlignment</span><span class="token punctuation">.</span>center<span class="token punctuation">,</span>
+  children<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+</code></pre></div><h3 id="弹性布局"><a href="#弹性布局" class="header-anchor">#</a> 弹性布局</h3> <div class="language-dart extra-class"><pre class="language-dart"><code><span class="token comment">// Expanded</span>
+<span class="token class-name">Row</span><span class="token punctuation">(</span>
+  children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token class-name">Expanded</span><span class="token punctuation">(</span>flex<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span> child<span class="token punctuation">:</span> <span class="token class-name">Container</span><span class="token punctuation">(</span>color<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>red<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token class-name">Expanded</span><span class="token punctuation">(</span>flex<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> child<span class="token punctuation">:</span> <span class="token class-name">Container</span><span class="token punctuation">(</span>color<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>blue<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+
+<span class="token comment">// Flexible</span>
+<span class="token class-name">Flexible</span><span class="token punctuation">(</span>
+  fit<span class="token punctuation">:</span> <span class="token class-name">FlexFit</span><span class="token punctuation">.</span>loose<span class="token punctuation">,</span>
+  child<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Content'</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+</code></pre></div><h3 id="堆叠布局"><a href="#堆叠布局" class="header-anchor">#</a> 堆叠布局</h3> <div class="language-dart extra-class"><pre class="language-dart"><code><span class="token class-name">Stack</span><span class="token punctuation">(</span>
+  children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token class-name">Container</span><span class="token punctuation">(</span>color<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>blue<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token class-name">Positioned</span><span class="token punctuation">(</span>
+      top<span class="token punctuation">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+      right<span class="token punctuation">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+      child<span class="token punctuation">:</span> <span class="token class-name">Icon</span><span class="token punctuation">(</span><span class="token class-name">Icons</span><span class="token punctuation">.</span>star<span class="token punctuation">,</span> color<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>white<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+</code></pre></div><h3 id="居中布局"><a href="#居中布局" class="header-anchor">#</a> 居中布局</h3> <div class="language-dart extra-class"><pre class="language-dart"><code><span class="token class-name">Center</span><span class="token punctuation">(</span>child<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'居中'</span></span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 或使用 Align</span>
+<span class="token class-name">Align</span><span class="token punctuation">(</span>
+  alignment<span class="token punctuation">:</span> <span class="token class-name">Alignment</span><span class="token punctuation">.</span>center<span class="token punctuation">,</span>
+  child<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'居中'</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+</code></pre></div><h3 id="滚动视图"><a href="#滚动视图" class="header-anchor">#</a> 滚动视图</h3> <div class="language-dart extra-class"><pre class="language-dart"><code><span class="token comment">// 单子组件滚动</span>
+<span class="token class-name">SingleChildScrollView</span><span class="token punctuation">(</span>
+  child<span class="token punctuation">:</span> <span class="token class-name">Column</span><span class="token punctuation">(</span>children<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+
+<span class="token comment">// 列表</span>
+<span class="token class-name">ListView</span><span class="token punctuation">(</span>
+  children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token class-name">ListTile</span><span class="token punctuation">(</span>title<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Item 1'</span></span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token class-name">ListTile</span><span class="token punctuation">(</span>title<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Item 2'</span></span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+
+<span class="token comment">// 动态列表</span>
+<span class="token class-name">ListView</span><span class="token punctuation">.</span><span class="token function">builder</span><span class="token punctuation">(</span>
+  itemCount<span class="token punctuation">:</span> items<span class="token punctuation">.</span>length<span class="token punctuation">,</span>
+  itemBuilder<span class="token punctuation">:</span> <span class="token punctuation">(</span>context<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token class-name">ListTile</span><span class="token punctuation">(</span>title<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span>items<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+</code></pre></div><hr> <h2 id="状态管理"><a href="#状态管理" class="header-anchor">#</a> 状态管理</h2> <h3 id="setstate"><a href="#setstate" class="header-anchor">#</a> setState</h3> <p>基础状态管理：</p> <div class="language-dart extra-class"><pre class="language-dart"><code><span class="token keyword">class</span> <span class="token class-name">CounterWidget</span> <span class="token keyword">extends</span> <span class="token class-name">StatefulWidget</span> <span class="token punctuation">{</span>
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">State</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">CounterWidget</span><span class="token punctuation">&gt;</span></span> <span class="token function">createState</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token function">_CounterWidgetState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> _CounterWidgetState <span class="token keyword">extends</span> <span class="token class-name">State</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">CounterWidget</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span>
+  int _count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">void</span> <span class="token function">_increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      _count<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token class-name">Column</span><span class="token punctuation">(</span>
+      children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Count: </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">_count</span></span><span class="token string">'</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token class-name">ElevatedButton</span><span class="token punctuation">(</span>onPressed<span class="token punctuation">:</span> _increment<span class="token punctuation">,</span> child<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'+1'</span></span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="provider"><a href="#provider" class="header-anchor">#</a> Provider</h3> <p>全局状态管理：</p> <div class="language-dart extra-class"><pre class="language-dart"><code><span class="token comment">// 定义 ChangeNotifier</span>
+<span class="token keyword">class</span> <span class="token class-name">CounterModel</span> <span class="token keyword">extends</span> <span class="token class-name">ChangeNotifier</span> <span class="token punctuation">{</span>
+  int _count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  int <span class="token keyword">get</span> count <span class="token operator">=</span><span class="token operator">&gt;</span> _count<span class="token punctuation">;</span>
+
+  <span class="token keyword">void</span> <span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    _count<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token function">notifyListeners</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 注册 Provider</span>
+<span class="token class-name">MultiProvider</span><span class="token punctuation">(</span>
+  providers<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token class-name">ChangeNotifierProvider</span><span class="token punctuation">(</span>create<span class="token punctuation">:</span> <span class="token punctuation">(</span>_<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token class-name">CounterModel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  child<span class="token punctuation">:</span> <span class="token class-name">MyApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+
+<span class="token comment">// 使用</span>
+<span class="token keyword">class</span> <span class="token class-name">CounterWidget</span> <span class="token keyword">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">final</span> counter <span class="token operator">=</span> context<span class="token punctuation">.</span>watch<span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">CounterModel</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Count: </span><span class="token interpolation"><span class="token punctuation">${</span><span class="token expression">counter<span class="token punctuation">.</span>count</span><span class="token punctuation">}</span></span><span class="token string">'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="riverpod"><a href="#riverpod" class="header-anchor">#</a> Riverpod</h3> <p>更现代的状态管理：</p> <div class="language-dart extra-class"><pre class="language-dart"><code><span class="token comment">// 定义 Provider</span>
+<span class="token keyword">final</span> counterProvider <span class="token operator">=</span> <span class="token class-name">StateProvider</span><span class="token generics"><span class="token punctuation">&lt;</span>int<span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">(</span>ref<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 使用</span>
+<span class="token keyword">final</span> count <span class="token operator">=</span> ref<span class="token punctuation">.</span><span class="token function">watch</span><span class="token punctuation">(</span>counterProvider<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ref<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>counterProvider<span class="token punctuation">.</span>notifier<span class="token punctuation">)</span><span class="token punctuation">.</span>state<span class="token operator">++</span><span class="token punctuation">;</span>
+</code></pre></div><hr> <h2 id="路由与导航"><a href="#路由与导航" class="header-anchor">#</a> 路由与导航</h2> <h3 id="基础导航"><a href="#基础导航" class="header-anchor">#</a> 基础导航</h3> <div class="language-dart extra-class"><pre class="language-dart"><code><span class="token comment">// 跳转到新页面</span>
+<span class="token class-name">Navigator</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>
+  context<span class="token punctuation">,</span>
+  <span class="token class-name">MaterialPageRoute</span><span class="token punctuation">(</span>builder<span class="token punctuation">:</span> <span class="token punctuation">(</span>context<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token class-name">DetailPage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 返回</span>
+<span class="token class-name">Navigator</span><span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 替换当前页</span>
+<span class="token class-name">Navigator</span><span class="token punctuation">.</span><span class="token function">pushReplacement</span><span class="token punctuation">(</span>
+  context<span class="token punctuation">,</span>
+  <span class="token class-name">MaterialPageRoute</span><span class="token punctuation">(</span>builder<span class="token punctuation">:</span> <span class="token punctuation">(</span>context<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token class-name">NewPage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="命名路由"><a href="#命名路由" class="header-anchor">#</a> 命名路由</h3> <div class="language-dart extra-class"><pre class="language-dart"><code><span class="token comment">// 定义路由</span>
+<span class="token class-name">MaterialApp</span><span class="token punctuation">(</span>
+  initialRoute<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">'/'</span></span><span class="token punctuation">,</span>
+  routes<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string-literal"><span class="token string">'/'</span></span><span class="token punctuation">:</span> <span class="token punctuation">(</span>context<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token class-name">HomePage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token string-literal"><span class="token string">'/detail'</span></span><span class="token punctuation">:</span> <span class="token punctuation">(</span>context<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token class-name">DetailPage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 跳转</span>
+<span class="token class-name">Navigator</span><span class="token punctuation">.</span><span class="token function">pushNamed</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> <span class="token string-literal"><span class="token string">'/detail'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 带参数</span>
+<span class="token class-name">Navigator</span><span class="token punctuation">.</span><span class="token function">pushNamed</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> <span class="token string-literal"><span class="token string">'/detail'</span></span><span class="token punctuation">,</span> arguments<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token string-literal"><span class="token string">'id'</span></span><span class="token punctuation">:</span> <span class="token number">123</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 接收参数</span>
+<span class="token keyword">class</span> <span class="token class-name">DetailPage</span> <span class="token keyword">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">final</span> args <span class="token operator">=</span> <span class="token class-name">ModalRoute</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">.</span>settings<span class="token punctuation">.</span>arguments <span class="token operator">as</span> <span class="token class-name">Map</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'ID: ${args['</span></span>id<span class="token string-literal"><span class="token string">']}'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><hr> <h2 id="网络请求"><a href="#网络请求" class="header-anchor">#</a> 网络请求</h2> <h3 id="http-封装"><a href="#http-封装" class="header-anchor">#</a> HTTP 封装</h3> <div class="language-dart extra-class"><pre class="language-dart"><code><span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'dart:convert'</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'package:http/http.dart'</span></span> <span class="token operator">as</span> http<span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">ApiService</span> <span class="token punctuation">{</span>
+  <span class="token keyword">static</span> <span class="token keyword">const</span> baseUrl <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'https://api.example.com'</span></span><span class="token punctuation">;</span>
+
+  <span class="token keyword">static</span> <span class="token class-name">Future</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Map</span><span class="token punctuation">&gt;</span></span> <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token class-name">String</span> path<span class="token punctuation">)</span> <span class="token keyword">async</span> <span class="token punctuation">{</span>
+    <span class="token keyword">final</span> response <span class="token operator">=</span> <span class="token keyword">await</span> http<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token class-name">Uri</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'</span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">baseUrl</span></span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">path</span></span><span class="token string">'</span></span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token function">jsonDecode</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>body<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">static</span> <span class="token class-name">Future</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Map</span><span class="token punctuation">&gt;</span></span> <span class="token function">post</span><span class="token punctuation">(</span><span class="token class-name">String</span> path<span class="token punctuation">,</span> <span class="token class-name">Map</span> data<span class="token punctuation">)</span> <span class="token keyword">async</span> <span class="token punctuation">{</span>
+    <span class="token keyword">final</span> response <span class="token operator">=</span> <span class="token keyword">await</span> http<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span>
+      <span class="token class-name">Uri</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'</span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">baseUrl</span></span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">path</span></span><span class="token string">'</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      headers<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token string-literal"><span class="token string">'Content-Type'</span></span><span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">'application/json'</span></span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+      body<span class="token punctuation">:</span> <span class="token function">jsonEncode</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token function">jsonDecode</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>body<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="使用示例"><a href="#使用示例" class="header-anchor">#</a> 使用示例</h3> <div class="language-dart extra-class"><pre class="language-dart"><code><span class="token keyword">class</span> <span class="token class-name">UserList</span> <span class="token keyword">extends</span> <span class="token class-name">StatefulWidget</span> <span class="token punctuation">{</span>
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">State</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">UserList</span><span class="token punctuation">&gt;</span></span> <span class="token function">createState</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token function">_UserListState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> _UserListState <span class="token keyword">extends</span> <span class="token class-name">State</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">UserList</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span>
+  <span class="token class-name">List</span> _users <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  bool _loading <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+
+  <span class="token metadata function">@override</span>
+  <span class="token keyword">void</span> <span class="token function">initState</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">initState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">_loadUsers</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token class-name">Future</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token keyword">void</span><span class="token punctuation">&gt;</span></span> <span class="token function">_loadUsers</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">async</span> <span class="token punctuation">{</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+      <span class="token keyword">final</span> data <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token class-name">ApiService</span><span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'/users'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        _users <span class="token operator">=</span> data<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'users'</span></span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        _loading <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> _loading <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>_loading<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token class-name">CircularProgressIndicator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token class-name">ListView</span><span class="token punctuation">.</span><span class="token function">builder</span><span class="token punctuation">(</span>
+      itemCount<span class="token punctuation">:</span> _users<span class="token punctuation">.</span>length<span class="token punctuation">,</span>
+      itemBuilder<span class="token punctuation">:</span> <span class="token punctuation">(</span>context<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token class-name">ListTile</span><span class="token punctuation">(</span>title<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span>_users<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'name'</span></span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><hr> <h2 id="本地存储"><a href="#本地存储" class="header-anchor">#</a> 本地存储</h2> <h3 id="sharedpreferences"><a href="#sharedpreferences" class="header-anchor">#</a> SharedPreferences</h3> <div class="language-dart extra-class"><pre class="language-dart"><code><span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'package:shared_preferences/shared_preferences.dart'</span></span><span class="token punctuation">;</span>
+
+<span class="token comment">// 存储</span>
+<span class="token class-name">Future</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token keyword">void</span><span class="token punctuation">&gt;</span></span> <span class="token function">saveData</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">async</span> <span class="token punctuation">{</span>
+  <span class="token keyword">final</span> prefs <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token class-name">SharedPreferences</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">await</span> prefs<span class="token punctuation">.</span><span class="token function">setString</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'name'</span></span><span class="token punctuation">,</span> <span class="token string-literal"><span class="token string">'Tom'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">await</span> prefs<span class="token punctuation">.</span><span class="token function">setInt</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'age'</span></span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">await</span> prefs<span class="token punctuation">.</span><span class="token function">setBool</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'isActive'</span></span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 读取</span>
+<span class="token class-name">Future</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token keyword">void</span><span class="token punctuation">&gt;</span></span> <span class="token function">loadData</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">async</span> <span class="token punctuation">{</span>
+  <span class="token keyword">final</span> prefs <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token class-name">SharedPreferences</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">final</span> name <span class="token operator">=</span> prefs<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'name'</span></span><span class="token punctuation">)</span> <span class="token operator">?</span><span class="token operator">?</span> <span class="token string-literal"><span class="token string">''</span></span><span class="token punctuation">;</span>
+  <span class="token keyword">final</span> age <span class="token operator">=</span> prefs<span class="token punctuation">.</span><span class="token function">getInt</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'age'</span></span><span class="token punctuation">)</span> <span class="token operator">?</span><span class="token operator">?</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">final</span> isActive <span class="token operator">=</span> prefs<span class="token punctuation">.</span><span class="token function">getBool</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'isActive'</span></span><span class="token punctuation">)</span> <span class="token operator">?</span><span class="token operator">?</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 删除</span>
+prefs<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'name'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+prefs<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><hr> <h2 id="生命周期"><a href="#生命周期" class="header-anchor">#</a> 生命周期</h2> <h3 id="statefulwidget-生命周期"><a href="#statefulwidget-生命周期" class="header-anchor">#</a> StatefulWidget 生命周期</h3> <div class="language- extra-class"><pre class="language-text"><code>createState → initState → build
+→ didChangeDependencies → setState → build
+→ deactivate → dispose
+</code></pre></div><table><thead><tr><th>钩子</th> <th>说明</th></tr></thead> <tbody><tr><td><code>initState</code></td> <td>组件初始化</td></tr> <tr><td><code>didChangeDependencies</code></td> <td>依赖变化</td></tr> <tr><td><code>build</code></td> <td>构建 UI</td></tr> <tr><td><code>didUpdateWidget</code></td> <td>父组件更新</td></tr> <tr><td><code>deactivate</code></td> <td>停用</td></tr> <tr><td><code>dispose</code></td> <td>销毁</td></tr></tbody></table> <div class="language-dart extra-class"><pre class="language-dart"><code><span class="token metadata function">@override</span>
+<span class="token keyword">void</span> <span class="token function">initState</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">initState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 初始化操作，如请求数据</span>
+<span class="token punctuation">}</span>
+
+<span class="token metadata function">@override</span>
+<span class="token keyword">void</span> <span class="token function">didChangeDependencies</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">didChangeDependencies</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 依赖变化时调用</span>
+<span class="token punctuation">}</span>
+
+<span class="token metadata function">@override</span>
+<span class="token keyword">void</span> <span class="token function">didUpdateWidget</span><span class="token punctuation">(</span><span class="token class-name">Widget</span> oldWidget<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">didUpdateWidget</span><span class="token punctuation">(</span>oldWidget<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 组件更新时调用</span>
+<span class="token punctuation">}</span>
+
+<span class="token metadata function">@override</span>
+<span class="token keyword">void</span> <span class="token function">dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 清理资源，如取消订阅</span>
+  <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><hr> <h2 id="动画"><a href="#动画" class="header-anchor">#</a> 动画</h2> <h3 id="基础动画"><a href="#基础动画" class="header-anchor">#</a> 基础动画</h3> <div class="language-dart extra-class"><pre class="language-dart"><code><span class="token comment">// 透明度动画</span>
+<span class="token class-name">FadeTransition</span><span class="token punctuation">(</span>
+  opacity<span class="token punctuation">:</span> _controller<span class="token punctuation">,</span>
+  child<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Hello'</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+
+<span class="token comment">// 缩放动画</span>
+<span class="token class-name">ScaleTransition</span><span class="token punctuation">(</span>
+  scale<span class="token punctuation">:</span> _controller<span class="token punctuation">,</span>
+  child<span class="token punctuation">:</span> <span class="token class-name">Container</span><span class="token punctuation">(</span>color<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>blue<span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+
+<span class="token comment">// 旋转动画</span>
+<span class="token class-name">RotationTransition</span><span class="token punctuation">(</span>
+  turns<span class="token punctuation">:</span> _controller<span class="token punctuation">,</span>
+  child<span class="token punctuation">:</span> <span class="token class-name">Icon</span><span class="token punctuation">(</span><span class="token class-name">Icons</span><span class="token punctuation">.</span>star<span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+</code></pre></div><h3 id="完整示例"><a href="#完整示例" class="header-anchor">#</a> 完整示例</h3> <div class="language-dart extra-class"><pre class="language-dart"><code><span class="token keyword">class</span> <span class="token class-name">AnimatedWidget</span> <span class="token keyword">extends</span> <span class="token class-name">StatefulWidget</span> <span class="token punctuation">{</span>
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">State</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">AnimatedWidget</span><span class="token punctuation">&gt;</span></span> <span class="token function">createState</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token function">_AnimatedWidgetState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> _AnimatedWidgetState <span class="token keyword">extends</span> <span class="token class-name">State</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">AnimatedWidget</span><span class="token punctuation">&gt;</span></span>
+    <span class="token keyword">with</span> <span class="token class-name">SingleTickerProviderStateMixin</span> <span class="token punctuation">{</span>
+  late <span class="token class-name">AnimationController</span> _controller<span class="token punctuation">;</span>
+  late <span class="token class-name">Animation</span><span class="token generics"><span class="token punctuation">&lt;</span>double<span class="token punctuation">&gt;</span></span> _animation<span class="token punctuation">;</span>
+
+  <span class="token metadata function">@override</span>
+  <span class="token keyword">void</span> <span class="token function">initState</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">initState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    _controller <span class="token operator">=</span> <span class="token class-name">AnimationController</span><span class="token punctuation">(</span>
+      duration<span class="token punctuation">:</span> <span class="token class-name">Duration</span><span class="token punctuation">(</span>seconds<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      vsync<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    _animation <span class="token operator">=</span> <span class="token class-name">Tween</span><span class="token generics"><span class="token punctuation">&lt;</span>double<span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span>begin<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> end<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">animate</span><span class="token punctuation">(</span>_controller<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    _controller<span class="token punctuation">.</span><span class="token function">forward</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token metadata function">@override</span>
+  <span class="token keyword">void</span> <span class="token function">dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    _controller<span class="token punctuation">.</span><span class="token function">dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token class-name">FadeTransition</span><span class="token punctuation">(</span>
+      opacity<span class="token punctuation">:</span> _animation<span class="token punctuation">,</span>
+      child<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Hello Animation'</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><hr> <h2 id="组件封装"><a href="#组件封装" class="header-anchor">#</a> 组件封装</h2> <h3 id="自定义-widget"><a href="#自定义-widget" class="header-anchor">#</a> 自定义 Widget</h3> <div class="language-dart extra-class"><pre class="language-dart"><code><span class="token keyword">class</span> <span class="token class-name">CustomCard</span> <span class="token keyword">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
+  <span class="token keyword">final</span> <span class="token class-name">String</span> title<span class="token punctuation">;</span>
+  <span class="token keyword">final</span> <span class="token class-name">String</span> content<span class="token punctuation">;</span>
+  <span class="token keyword">final</span> <span class="token class-name">VoidCallback</span><span class="token operator">?</span> onTap<span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> <span class="token class-name">CustomCard</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token class-name">Key</span><span class="token operator">?</span> key<span class="token punctuation">,</span>
+    required <span class="token keyword">this</span><span class="token punctuation">.</span>title<span class="token punctuation">,</span>
+    required <span class="token keyword">this</span><span class="token punctuation">.</span>content<span class="token punctuation">,</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>onTap<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token keyword">super</span><span class="token punctuation">(</span>key<span class="token punctuation">:</span> key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token class-name">Card</span><span class="token punctuation">(</span>
+      child<span class="token punctuation">:</span> <span class="token class-name">InkWell</span><span class="token punctuation">(</span>
+        onTap<span class="token punctuation">:</span> onTap<span class="token punctuation">,</span>
+        child<span class="token punctuation">:</span> <span class="token class-name">Padding</span><span class="token punctuation">(</span>
+          padding<span class="token punctuation">:</span> <span class="token class-name">EdgeInsets</span><span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          child<span class="token punctuation">:</span> <span class="token class-name">Column</span><span class="token punctuation">(</span>
+            crossAxisAlignment<span class="token punctuation">:</span> <span class="token class-name">CrossAxisAlignment</span><span class="token punctuation">.</span>start<span class="token punctuation">,</span>
+            children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+              <span class="token class-name">Text</span><span class="token punctuation">(</span>title<span class="token punctuation">,</span> style<span class="token punctuation">:</span> <span class="token class-name">Theme</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">.</span>textTheme<span class="token punctuation">.</span>titleMedium<span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token class-name">SizedBox</span><span class="token punctuation">(</span>height<span class="token punctuation">:</span> <span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token class-name">Text</span><span class="token punctuation">(</span>content<span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+          <span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 使用</span>
+<span class="token class-name">CustomCard</span><span class="token punctuation">(</span>
+  title<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">'标题'</span></span><span class="token punctuation">,</span>
+  content<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">'内容'</span></span><span class="token punctuation">,</span>
+  onTap<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Tapped'</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+</code></pre></div><hr> <h2 id="调试技巧"><a href="#调试技巧" class="header-anchor">#</a> 调试技巧</h2> <h3 id="日志输出"><a href="#日志输出" class="header-anchor">#</a> 日志输出</h3> <div class="language-dart extra-class"><pre class="language-dart"><code><span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Debug: </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">variable</span></span><span class="token string">'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 生产环境日志</span>
+<span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'package:flutter/foundation.dart'</span></span><span class="token punctuation">;</span>
+<span class="token function">debugPrint</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Debug message'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="条件渲染调试"><a href="#条件渲染调试" class="header-anchor">#</a> 条件渲染调试</h3> <div class="language-dart extra-class"><pre class="language-dart"><code><span class="token comment">// 只在调试模式执行</span>
+<span class="token keyword">assert</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 检查逻辑</span>
+  <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="常用调试工具"><a href="#常用调试工具" class="header-anchor">#</a> 常用调试工具</h3> <table><thead><tr><th>工具</th> <th>说明</th></tr></thead> <tbody><tr><td><code>flutter run -d &lt;device&gt;</code></td> <td>指定设备运行</td></tr> <tr><td><code>flutter inspect</code></td> <td>Widget 检查器</td></tr> <tr><td><code>flutter analyze</code></td> <td>代码分析</td></tr> <tr><td><code>flutter test</code></td> <td>运行测试</td></tr></tbody></table> <hr> <h2 id="发布构建"><a href="#发布构建" class="header-anchor">#</a> 发布构建</h2> <h3 id="android"><a href="#android" class="header-anchor">#</a> Android</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># Debug 构建</span>
+flutter build apk <span class="token parameter variable">--debug</span>
+
+<span class="token comment"># Release 构建</span>
+flutter build apk <span class="token parameter variable">--release</span>
+
+<span class="token comment"># APK 位置: build/app/outputs/flutter-apk/</span>
+</code></pre></div><h3 id="ios"><a href="#ios" class="header-anchor">#</a> iOS</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># Debug 构建</span>
+flutter build ios <span class="token parameter variable">--debug</span>
+
+<span class="token comment"># Release 构建（需配置签名）</span>
+flutter build ios <span class="token parameter variable">--release</span>
+</code></pre></div><h3 id="web"><a href="#web" class="header-anchor">#</a> Web</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>flutter build web
+<span class="token comment"># 输出目录: build/web/</span>
+</code></pre></div></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/webDoc/views/studyPage/appDev/dartStudy.html" class="prev">
+          Dart 语言基础
+        </a></span> <span class="next"><a href="/webDoc/views/studyPage/express/expressDemo.html">
+          简单的express服务
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#概述" class="sidebar-link reco-side-概述" data-v-b57cc07c>概述</a></li><li class="level-2" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#环境搭建" class="sidebar-link reco-side-环境搭建" data-v-b57cc07c>环境搭建</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#安装" class="sidebar-link reco-side-安装" data-v-b57cc07c>安装</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#ide-配置" class="sidebar-link reco-side-ide-配置" data-v-b57cc07c>IDE 配置</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#创建项目" class="sidebar-link reco-side-创建项目" data-v-b57cc07c>创建项目</a></li><li class="level-2" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#基础概念" class="sidebar-link reco-side-基础概念" data-v-b57cc07c>基础概念</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#widget-简介" class="sidebar-link reco-side-widget-简介" data-v-b57cc07c>Widget 简介</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#组件分类" class="sidebar-link reco-side-组件分类" data-v-b57cc07c>组件分类</a></li><li class="level-2" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#基础组件" class="sidebar-link reco-side-基础组件" data-v-b57cc07c>基础组件</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#文本与样式" class="sidebar-link reco-side-文本与样式" data-v-b57cc07c>文本与样式</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#按钮" class="sidebar-link reco-side-按钮" data-v-b57cc07c>按钮</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#图片" class="sidebar-link reco-side-图片" data-v-b57cc07c>图片</a></li><li class="level-2" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#布局组件" class="sidebar-link reco-side-布局组件" data-v-b57cc07c>布局组件</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#线性布局" class="sidebar-link reco-side-线性布局" data-v-b57cc07c>线性布局</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#弹性布局" class="sidebar-link reco-side-弹性布局" data-v-b57cc07c>弹性布局</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#堆叠布局" class="sidebar-link reco-side-堆叠布局" data-v-b57cc07c>堆叠布局</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#居中布局" class="sidebar-link reco-side-居中布局" data-v-b57cc07c>居中布局</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#滚动视图" class="sidebar-link reco-side-滚动视图" data-v-b57cc07c>滚动视图</a></li><li class="level-2" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#状态管理" class="sidebar-link reco-side-状态管理" data-v-b57cc07c>状态管理</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#setstate" class="sidebar-link reco-side-setstate" data-v-b57cc07c>setState</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#provider" class="sidebar-link reco-side-provider" data-v-b57cc07c>Provider</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#riverpod" class="sidebar-link reco-side-riverpod" data-v-b57cc07c>Riverpod</a></li><li class="level-2" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#路由与导航" class="sidebar-link reco-side-路由与导航" data-v-b57cc07c>路由与导航</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#基础导航" class="sidebar-link reco-side-基础导航" data-v-b57cc07c>基础导航</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#命名路由" class="sidebar-link reco-side-命名路由" data-v-b57cc07c>命名路由</a></li><li class="level-2" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#网络请求" class="sidebar-link reco-side-网络请求" data-v-b57cc07c>网络请求</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#http-封装" class="sidebar-link reco-side-http-封装" data-v-b57cc07c>HTTP 封装</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#使用示例" class="sidebar-link reco-side-使用示例" data-v-b57cc07c>使用示例</a></li><li class="level-2" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#本地存储" class="sidebar-link reco-side-本地存储" data-v-b57cc07c>本地存储</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#sharedpreferences" class="sidebar-link reco-side-sharedpreferences" data-v-b57cc07c>SharedPreferences</a></li><li class="level-2" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#生命周期" class="sidebar-link reco-side-生命周期" data-v-b57cc07c>生命周期</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#statefulwidget-生命周期" class="sidebar-link reco-side-statefulwidget-生命周期" data-v-b57cc07c>StatefulWidget 生命周期</a></li><li class="level-2" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#动画" class="sidebar-link reco-side-动画" data-v-b57cc07c>动画</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#基础动画" class="sidebar-link reco-side-基础动画" data-v-b57cc07c>基础动画</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#完整示例" class="sidebar-link reco-side-完整示例" data-v-b57cc07c>完整示例</a></li><li class="level-2" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#组件封装" class="sidebar-link reco-side-组件封装" data-v-b57cc07c>组件封装</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#自定义-widget" class="sidebar-link reco-side-自定义-widget" data-v-b57cc07c>自定义 Widget</a></li><li class="level-2" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#调试技巧" class="sidebar-link reco-side-调试技巧" data-v-b57cc07c>调试技巧</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#日志输出" class="sidebar-link reco-side-日志输出" data-v-b57cc07c>日志输出</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#条件渲染调试" class="sidebar-link reco-side-条件渲染调试" data-v-b57cc07c>条件渲染调试</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#常用调试工具" class="sidebar-link reco-side-常用调试工具" data-v-b57cc07c>常用调试工具</a></li><li class="level-2" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#发布构建" class="sidebar-link reco-side-发布构建" data-v-b57cc07c>发布构建</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#android" class="sidebar-link reco-side-android" data-v-b57cc07c>Android</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#ios" class="sidebar-link reco-side-ios" data-v-b57cc07c>iOS</a></li><li class="level-3" data-v-b57cc07c><a href="/webDoc/views/studyPage/appDev/flutterStudy.html#web" class="sidebar-link reco-side-web" data-v-b57cc07c>Web</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div><div class="kanbanniang" data-v-5775ee02><div class="banniang-container" style="display:;" data-v-5775ee02><div class="messageBox" style="right:68px;bottom:190px;display:none;" data-v-5775ee02>
+      欢迎来到 Maple
+    </div> <div class="operation" style="right:90px;bottom:40px;display:;" data-v-5775ee02><i class="kbnfont kbn-ban-home ban-home" data-v-5775ee02></i> <i class="kbnfont kbn-ban-message message" data-v-5775ee02></i> <i class="kbnfont kbn-ban-close close" data-v-5775ee02></i> <a target="_blank" href="https://vuepress-theme-reco.recoluan.com/views/plugins/kanbanniang.html" data-v-5775ee02><i class="kbnfont kbn-ban-info info" data-v-5775ee02></i></a> <i class="kbnfont kbn-ban-theme skin" style="display:;" data-v-5775ee02></i></div> <canvas id="banniang" width="150" height="220" class="live2d" style="right:90px;bottom:-20px;opacity:0.9;" data-v-5775ee02></canvas></div> <div class="showBanNiang" style="display:none;" data-v-5775ee02>
+    看板娘
+  </div></div></div></div>
+    <script src="/webDoc/assets/js/app.3f5d470f.js" defer></script><script src="/webDoc/assets/js/7.8061b6b1.js" defer></script><script src="/webDoc/assets/js/2.a3cee522.js" defer></script><script src="/webDoc/assets/js/1.50eccc97.js" defer></script><script src="/webDoc/assets/js/53.23ae6434.js" defer></script>
+  </body>
+</html>
