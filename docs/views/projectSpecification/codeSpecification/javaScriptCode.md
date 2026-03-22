@@ -1,6 +1,6 @@
 ---
 title: JavaScript 规范
-date: 2024-02-20
+date: 2026-03-15
 author: Maple 
 ---
 
@@ -83,7 +83,7 @@ __filename; // 表示当前文件的绝对路径
     var userId;
     function getUserInfo(){};
     function setUserName(){};
-    function deleteUser()();
+    function deleteUser() {};
     // ……
 ```
 
@@ -224,7 +224,7 @@ function getWebsocketInstance(
 错误示例：
 
 ```javascript
-	function getWebsocketInstance(url,t oken, binary=true, encrypt=true){
+	function getWebsocketInstance(url, token, binary = true, encrypt = true) {
         //...
     }
 ```
@@ -315,7 +315,7 @@ element.addEventListener("scroll", scrollHandler, false);
 错误示例：
 
 ```javascript
-element.onsrcoll = scrollHandler;
+element.onscroll = scrollHandler;
 ```
 
 - 添加的`dom事件监听函数`，在不需要事件监听时，要及时移除事件的监听，这样有利于页面的性能表现。
@@ -359,7 +359,7 @@ const aHandler = function(e) {
     // ...
   }
 };
-document.body.addEevetListener("click", aHandler, true);
+document.body.addEventListener("click", aHandler, true);
 ```
 
 错误示例：
@@ -367,7 +367,7 @@ document.body.addEevetListener("click", aHandler, true);
 ```javascript
 const aNodes = document.body.querySelectorAll(“a”);
     aNodes.forEach((aNode)=>{
-    aNode.addEevetListener("click",aHandler ,false);
+    aNode.addEventListener("click", aHandler, false);
 });
 ```
 <br/>
@@ -410,10 +410,306 @@ if (condition !== 1) {
 for(let i = 0; i < arr.length-1; i ++) {
     if(!arr[i].result) {
         condition(arr[i]);
-        break；
+        break;
     }
 }
 ```
 <br/>
 
 ## 9 switch 必须添加 default,case 根据元素的出现频繁程度，越频繁的元素写在越前面。
+
+## 10 注释规范
+
+### 10.1 注释原则
+
+- 注释应该解释「为什么」而不是「是什么」
+- 不要添加无意义的注释
+- 保持注释与代码同步更新
+
+### 10.2 单行注释
+
+```javascript
+// 正确示例：解释原因
+// 由于接口返回的时间是 UTC 格式，需要转换
+const localTime = new Date(utcTime);
+
+// 错误示例：重复代码内容
+// 定义用户ID
+const userId = '123';
+```
+
+### 10.3 多行注释
+
+```javascript
+/**
+ * 计算用户年龄
+ * @param {Date|string} birthday - 生日日期
+ * @returns {number} 年龄
+ */
+function calculateAge(birthday) {
+    // ...
+}
+```
+
+### 10.4 函数注释
+
+使用 JSDoc 风格：
+
+```javascript
+/**
+ * 获取用户信息
+ * @param {string} userId - 用户ID
+ * @param {Object} [options] - 可选配置
+ * @param {boolean} [options.includeDetail=false] - 是否包含详细信息
+ * @returns {Promise<Object>} 用户信息对象
+ */
+async function getUserInfo(userId, options = {}) {
+    // ...
+}
+```
+
+## 11 异步编程
+
+### 11.1 优先使用 async/await
+
+正确示例：
+
+```javascript
+async function fetchUserData(userId) {
+    try {
+        const response = await fetch(`/api/users/${userId}`);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('获取用户数据失败:', error);
+        throw error;
+    }
+}
+```
+
+### 11.2 Promise 链式调用
+
+```javascript
+fetch('/api/user')
+    .then(res => res.json())
+    .then(data => processData(data))
+    .catch(error => handleError(error))
+    .finally(() => hideLoading());
+```
+
+### 11.3 并行请求
+
+```javascript
+// 同时发起多个请求
+const [user, posts] = await Promise.all([
+    fetch('/api/user').then(r => r.json()),
+    fetch('/api/posts').then(r => r.json())
+]);
+```
+
+## 12 错误处理
+
+### 12.1 使用 try-catch
+
+```javascript
+try {
+    const data = JSON.parse(jsonString);
+    validateData(data);
+    saveData(data);
+} catch (error) {
+    if (error instanceof SyntaxError) {
+        console.error('JSON 解析错误:', error.message);
+    } else if (error instanceof ValidationError) {
+        console.error('数据验证失败:', error.message);
+    } else {
+        throw error; // 重新抛出未知错误
+    }
+}
+```
+
+### 12.2 自定义错误
+
+```javascript
+class ValidationError extends Error {
+    constructor(message, field) {
+        super(message);
+        this.name = 'ValidationError';
+        this.field = field;
+    }
+}
+
+function validateUser(user) {
+    if (!user.name) {
+        throw new ValidationError('用户名不能为空', 'name');
+    }
+}
+```
+
+### 12.3 条件判断提前返回
+
+```javascript
+function processData(data) {
+    if (!data) return;  // 提前返回，减少嵌套
+    if (!data.items) return;
+
+    // 正式处理逻辑
+    data.items.forEach(item => {
+        // ...
+    });
+}
+```
+
+## 13 模块规范
+
+### 13.1 ES Module 导出
+
+```javascript
+// 命名导出
+export const MAX_COUNT = 100;
+export function formatDate() {}
+
+// 默认导出
+export default class UserService {}
+
+// 统一导出
+const utils = { formatDate, validate };
+export default utils;
+```
+
+### 13.2 导入顺序
+
+```javascript
+// 1. React/框架核心
+import React from 'react';
+
+// 2. 第三方库
+import { debounce } from 'lodash';
+
+// 3. 工具函数
+import { formatDate } from './utils';
+
+// 4. 组件
+import Button from '@/components/Button';
+
+// 5. 样式/资源
+import './styles.css';
+```
+
+### 13.3 避免循环依赖
+
+```javascript
+// a.js
+import { bMethod } from './b';
+
+export function aMethod() {
+    return 'a';
+}
+export { bMethod };
+
+// b.js
+// 不要直接导入 a 的具体方法，改为在需要时通过参数传递
+export function bMethod(a) {
+    return a ? a.aMethod() : null;
+}
+```
+
+## 14 类型检查
+
+### 14.1 类型判断
+
+```javascript
+// 基础类型判断
+typeof 'str' === 'string'
+typeof 123 === 'number'
+typeof true === 'boolean'
+typeof undefined === 'undefined'
+typeof null === 'object'  // 注意
+typeof function(){} === 'function'
+
+// 对象类型判断
+Object.prototype.toString.call([]) === '[object Array]'
+Array.isArray([])
+value instanceof Date
+value instanceof RegExp
+```
+
+### 14.2 数值判断
+
+```javascript
+// 判断是否为有效数字
+Number.isNaN(NaN)           // true
+Number.isFinite(Infinity)   // false
+
+// 判断是否为整数
+Number.isInteger(3.14)     // false
+
+// 判断是否为空
+!value                  // 对于 null/undefined/空字符串/0 都为 true
+value !== null && value !== undefined  // 明确判断非空
+```
+
+## 15 字符串处理
+
+### 15.1 模板字符串
+
+```javascript
+const name = '张三';
+const message = `您好，${name}！
+今天是 ${new Date().toLocaleDateString()}。
+欢迎来到 ${location.href}。`;
+```
+
+### 15.2 字符串拼接
+
+正确示例：
+
+```javascript
+const path = ['a', 'b', 'c'].join('/');
+const query = Object.entries(params)
+    .map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(v)}`)
+    .join('&');
+```
+
+错误示例：
+
+```javascript
+const path = 'a' + '/' + 'b' + '/' + 'c';  // 不推荐
+```
+
+## 16 代码检测
+
+### 16.1 使用 ESLint
+
+推荐配置：
+
+```json
+{
+    "extends": ["eslint:recommended"],
+    "parserOptions": {
+        "ecmaVersion": 2022,
+        "sourceType": "module"
+    },
+    "rules": {
+        "no-console": "warn",
+        "no-unused-vars": "error",
+        "prefer-const": "error"
+    }
+}
+```
+
+### 16.2 Git Hooks
+
+使用 husky + lint-staged：
+
+```json
+{
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.js": ["eslint --fix", "git add"]
+    }
+}
+```

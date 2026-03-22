@@ -13,6 +13,14 @@ module.exports = [
                     },
                 ]
             },
+            {
+                text: "Ollama 使用指南",
+                link: "/views/aiStudyPage/ollama/ollamaDoc",
+            },
+            {
+                text: "LM Studio 使用指南",
+                link: "/views/aiStudyPage/lmstudio/lmstudioDoc",
+            },
         ],
     },
     // 工具
@@ -73,6 +81,27 @@ module.exports = [
                 link: "/views/studyPage/regularExpression",
             },
             {
+                text: "Vue2 学习笔记",
+                link: "/views/studyPage/vueV2Study",
+            },
+            {
+                text: "Vue3 学习笔记",
+                link: "/views/studyPage/vueV3Study",
+            },
+            {
+                text: "App 开发",
+                items: [
+                    {
+                        text: "Dart 语言基础",
+                        link: "/views/studyPage/appDev/dartStudy",
+                    },
+                    {
+                        text: "Flutter 开发入门",
+                        link: "/views/studyPage/appDev/flutterStudy",
+                    },
+                ]
+            },
+            {
                 text: "Express学习文档",
                 items: [
                     {
@@ -102,6 +131,14 @@ module.exports = [
             {
                 text: "Vue 相关",
                 link: "/views/ProblemRecord/VueAbout",
+            },
+            {
+                text: "CSS 相关",
+                link: "/views/ProblemRecord/CssAbout",
+            },
+            {
+                text: "HTML 相关",
+                link: "/views/ProblemRecord/HtmlAbout",
             },
         ],
     },

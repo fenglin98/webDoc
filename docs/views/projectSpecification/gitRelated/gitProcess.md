@@ -1,7 +1,7 @@
 ---
 title: git 操作流程管理规范
 description: 便于多人协同开发、多版本并行开发的git操作流程管理规范
-date: 2024-02-05
+date: 2026-03-15
 author: Maple
 tags:
   - git

@@ -1,6 +1,6 @@
 ---
 title: CSS 编写规范
-date: 2024-02-20
+date: 2026-03-15
 author: Maple
 tags:
   - CSS
@@ -10,475 +10,577 @@ categories:
 
 ## 1 命名规范
 
-### 1.1 长名称或词组可以使用中横线来连接
+### 1.1 长名称或词组使用中横线连接
 
-```html
-<ul class="list">
-  <li class="list-item">
-    <span class="list-item-left"></span>
-    <span class="list-item-right"></span>
-  </li>
-</ul>
+```css
+.list-item { }
+.list-item-left { }
+.list-item-right { }
+.header-nav { }
+.content-wrapper { }
 ```
 
-### 1.2 不使用“\_”下划线来命名
+### 1.2 不使用下划线命名
 
-### 1.3 尽量不采用缩略词，采用完整的有意义的单词，禁止采用中文拼音和中文拼音缩写。
+下划线容易与 CSS 伪类混淆，且大多数 CSS 规范都采用中横线。
 
-### 1.4 一律采用小写英文字母或数字，不以数字和 - 开头。
+### 1.3 使用完整有意义的单词
+
+- 采用完整单词，避免缩写
+- 禁止使用中文拼音或拼音缩写
+
+正确示例：
+
+```css
+.page-container { }
+.sidebar-wrapper { }
+.user-avatar { }
+```
+
+错误示例：
+
+```css
+.page-cc { }    /* 缩写不明确 */
+.zt { }         /* 中文拼音 */
+.ren-name { }   /* 拼音缩写 */
+```
+
+### 1.4 命名格式
+
+- 一律采用小写英文字母或数字
+- 不以数字开头
+- 使用中横线 `-` 连接
 
 ## 2 CSS 属性书写顺序
 
-- 按以下顺序书写：
-  - 1.位置属性(position, top, right, z-index, display, float 等)
-  - 2.大小(width, height, padding, margin)
-  - 3.文字系列(font, line-height, letter-spacing, color- text-align 等)
-  - 4.背景(background, border 等)
-  - 5.其他(animation, transition 等)
+按以下顺序书写 CSS 属性：
 
-> 原则就是会触发重排（或称回流 reflow）的属性要写在触发重绘（repaint）的属性前面。因为重排步骤会包括重绘。
+1. **位置属性**：`position`, `top`, `right`, `bottom`, `left`, `z-index`
+2. **显示属性**：`display`, `float`, `clear`, `overflow`
+3. **盒子模型**：`width`, `height`, `padding`, `margin`, `border`
+4. **文字属性**：`font`, `line-height`, `letter-spacing`, `color`, `text-align`
+5. **背景装饰**：`background`, `border-radius`, `box-shadow`
+6. **变换动画**：`transform`, `transition`, `animation`
+7. **其他属性**：`opacity`, `cursor`, `pointer-events`
 
+> 原则：触发重排（reflow）的属性写在触发重绘（repaint）的属性前面。
 
-## 3 CSS书写原则
-
-### 3.1 不随意使用id
-
-`id` 在 `css` 中是唯一的，不能多次使用，而使用 `class` 类选择器却可以重复使用，另外 `id` 的优先级优先与`class`，所以id应该按需使用，而不能滥用。使用前，要对项目的中的id命名进行统筹规划，例如：可以以模块为划分，在每个 `id` 名字前加`项目前缀和模块前缀`。
-
-
-### 3.2 禁止在ID选择器前面进行嵌套或写附加的选择器
-
-
-### 3.3 尽量减少使用 !important 来强制覆盖样式	
-
-
-### 3.4 为元素添加 z-index 前请先进行 z-index 的分层规划。	
-
-### 3.5 尽量利用 css 继承。
-
-
-## 4 简单样式效果可由CSS实现
-
-
-#### 三角形
+正确示例：
 
 ```css
-.triangle-up {
-  width: 0;
-  height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-bottom: 40px solid red;
-}
-.triangle-down {
-  width: 0;
-  height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-top: 40px solid red;
-}
-.triangle-left {
-  width: 0;
-  height: 0;
-  border-top: 20px solid transparent;
-  border-right: 40px solid red;
-  border-bottom: 20px solid transparent;
-}
-.triangle-right {
-  width: 0;
-  height: 0;
-  border-top: 20px solid transparent;
-  border-left: 40px solid red;
-  border-bottom: 20px solid transparent;
-}
-.triangle-topleft {
-  width: 0;
-  height: 0;
-  border-top: 40px solid red;
-  border-right: 40px solid transparent;
-}
-.triangle-topright {
-  width: 0;
-  height: 0;
-  border-top: 40px solid red;
-  border-left: 40px solid transparent;
-}
-.triangle-bottomleft {
-  width: 0;
-  height: 0;
-  border-bottom: 40px solid red;
-  border-right: 40px solid transparent;
-}
-.triangle-bottomright {
-  width: 0;
-  height: 0;
-  border-bottom: 40px solid red;
-  border-left: 40px solid transparent;
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+
+    display: none;
+    width: 400px;
+    height: 300px;
+    padding: 20px;
+    margin: -150px 0 0 -200px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    text-align: center;
+
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    transition: opacity 0.3s ease;
 }
 ```
 
-<style>
- .triangle-list{
-      display:flex;
-      align-items: center;
-          flex-wrap: wrap;
-    list-style: none;
-  }
-  .triangle-list li{
+## 3 选择器规范
+
+### 3.1 不随意使用 id
+
+- id 在 CSS 中是唯一的，不能重复使用
+- id 的优先级高于 class，滥用会增加调试难度
+- 使用 class 类选择器更灵活、可复用
+
+### 3.2 禁止在 ID 选择器前嵌套或添加附加选择器
+
+正确示例：
+
+```css
+#header { }
+#header .nav { }
+```
+
+错误示例：
+
+```css
+div#header { }      /* 不必要的嵌套 */
+.header-logo#logo { }  /* 不必要的限定 */
+```
+
+### 3.3 控制选择器权重
+
+- 避免使用 `!important`
+- 通过合理的层级规划解决样式冲突
+- 优先使用后代选择器而非子选择器
+
+### 3.4 选择器嵌套层级
+
+- 嵌套层级不超过 4 层
+- 优先使用 BEM 命名规范减少嵌套
+
+BEM 命名示例：
+
+```css
+.article { }
+.article__title { }
+.article__content { }
+.article__item--highlight { }
+```
+
+## 4 CSS 书写原则
+
+### 4.1 z-index 分层规划
+
+在使用 z-index 前先进行分层规划：
+
+| 层级 | 用途 | 范围 |
+|------|------|------|
+| 基础层 | 普通文档流 | 0 |
+| 内容层 | 页面主要内容 | 1-100 |
+| 悬浮层 | 下拉菜单、工具提示 | 101-200 |
+| 弹窗层 | 模态框、弹窗 | 201-300 |
+| 遮罩层 | 背景遮罩 | 301-400 |
+| 最高层 | 提示消息、加载动画 | 401+ |
+
+### 4.2 利用 CSS 继承
+
+将相同样式提取到父元素，让子元素继承：
+
+```css
+.article {
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #333;
+}
+.article__title {
+    font-size: 18px;  /* 独有样式 */
+    font-weight: bold;
+}
+```
+
+### 4.3 避免使用 * 通配符
+
+通配符会增加 CSS 匹配计算开销：
+
+正确示例：
+
+```css
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+```
+
+错误示例：
+
+```css
+* {
+    margin: 0;
+    padding: 0;
+}
+```
+
+## 5 Flexbox 布局规范
+
+### 5.1 flex 容器属性
+
+```css
+.container {
+    display: flex;
+    flex-direction: row | column;      /* 主轴方向 */
+    justify-content: flex-start | center | space-between; /* 主轴对齐 */
+    align-items: stretch | center | flex-start;         /* 交叉轴对齐 */
+    flex-wrap: nowrap | wrap;          /* 换行 */
+    gap: 10px;                         /* 间距 */
+}
+```
+
+### 5.2 flex 子元素属性
+
+```css
+.item {
+    flex-grow: 0;    /* 放大比例 */
+    flex-shrink: 1;  /* 缩小比例 */
+    flex-basis: auto; /* 初始大小 */
+    flex: 1;        /* 简写 */
+
+    align-self: center; /* 单独对齐 */
+}
+```
+
+## 6 Grid 布局规范
+
+### 6.1 网格容器
+
+```css
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 三列等宽 */
+    grid-template-rows: auto 1fr auto;      /* 行高设置 */
+    gap: 20px;                               /* 网格间距 */
+
+    /* 命名网格线 */
+    grid-template-areas:
+        "header header header"
+        "sidebar main main"
+        "footer footer footer";
+}
+```
+
+### 6.2 网格子元素
+
+```css
+.header {
+    grid-area: header;
+}
+.sidebar {
+    grid-area: sidebar;
+}
+.main {
+    grid-area: main;
+}
+```
+
+## 7 响应式设计
+
+### 7.1 媒体查询断点
+
+```css
+/* 移动端优先 */
+/* 小屏幕 */
+@media (min-width: 576px) { }
+
+/* 中等屏幕 */
+@media (min-width: 768px) { }
+
+/* 大屏幕 */
+@media (min-width: 992px) { }
+
+/* 超大屏幕 */
+@media (min-width: 1200px) { }
+```
+
+### 7.2 移动端优先 vs 桌面端优先
+
+移动端优先（推荐）：
+
+```css
+.column {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    font-size: 10px;
-    padding: 15px 10px;
-    align-items: center;
-       
-  }
-  .triangle-up {
+}
+
+@media (min-width: 768px) {
+    .column {
+        flex-direction: row;
+    }
+}
+```
+
+### 7.3 使用 rem 而非 px
+
+```css
+html {
+    font-size: 16px;  /* 基准值 */
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;  /* 移动端适当缩小 */
+    }
+}
+
+.element {
+    width: 2rem;  /* 32px */
+    padding: 0.5rem;  /* 8px */
+}
+```
+
+## 8 CSS 变量
+
+### 8.1 定义与使用
+
+```css
+:root {
+    /* 颜色 */
+    --color-primary: #1890ff;
+    --color-success: #52c41a;
+    --color-danger: #ff4d4f;
+
+    /* 字体 */
+    --font-size-base: 14px;
+    --font-size-lg: 16px;
+
+    /* 间距 */
+    --spacing-base: 8px;
+    --spacing-lg: 16px;
+
+    /* 圆角 */
+    --border-radius: 4px;
+}
+
+.button {
+    background: var(--color-primary);
+    padding: var(--spacing-base) var(--spacing-lg);
+    border-radius: var(--border-radius);
+}
+```
+
+### 8.2 主题切换
+
+```css
+[data-theme="dark"] {
+    --color-bg: #1a1a1a;
+    --color-text: #fff;
+}
+
+[data-theme="light"] {
+    --color-bg: #fff;
+    --color-text: #333;
+}
+```
+
+## 9 常用样式技巧
+
+### 9.1 三角形
+
+```css
+.triangle-up {
     width: 0;
     height: 0;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     border-bottom: 40px solid red;
-  }
-  .triangle-down {
+}
+.triangle-down {
     width: 0;
     height: 0;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     border-top: 40px solid red;
-  }
-  .triangle-left {
+}
+.triangle-left {
     width: 0;
     height: 0;
     border-top: 20px solid transparent;
     border-right: 40px solid red;
     border-bottom: 20px solid transparent;
-  }
-  .triangle-right {
+}
+.triangle-right {
     width: 0;
     height: 0;
     border-top: 20px solid transparent;
     border-left: 40px solid red;
     border-bottom: 20px solid transparent;
-  }
-  .triangle-topleft {
-    width: 0;
-    height: 0;
-    border-top: 40px solid red;
-    border-right: 40px solid transparent;
-  }
-  .triangle-topright {
-    width: 0;
-    height: 0;
-    border-top: 40px solid red;
-    border-left: 40px solid transparent;
-  }
-  .triangle-bottomleft {
-    width: 0;
-    height: 0;
-    border-bottom: 40px solid red;
-    border-right: 40px solid transparent;
-  }
-  .triangle-bottomright {
-    width: 0;
-    height: 0;
-    border-bottom: 40px solid red;
-    border-left: 40px solid transparent;
-  }
-</style>
-<ul class="triangle-list">
-    <li>
-      <span>triangle-up</span>
-      <div class="triangle-up"></div>      
-    </li>
-     <li>
-      <span>triangle-down</span>
-      <div class="triangle-down"></div>      
-    </li>
-     <li>
-      <span>triangle-left</span>
-      <div class="triangle-left"></div>      
-    </li>
-     <li>
-      <span>triangle-right</span>
-      <div class="triangle-right"></div>      
-    </li>
-     <li>
-      <span>triangle-topleft</span>
-      <div class="triangle-topleft"></div>      
-    </li>
-     <li>
-      <span>triangle-topright</span>
-      <div class="triangle-topright"></div>      
-    </li>
-     <li>
-      <span>triangle-bottomleft</span>
-      <div class="triangle-bottomleft"></div>      
-    </li>
-     <li>
-      <span>triangle-bottomright</span>
-      <div class="triangle-bottomright"></div>      
-    </li>
-</ul>
-
-#### 阴影
-
-- 基本用法
-
-```css
-.shadow-rightBottom {
-  box-shadow: 2px 2px 5px #000;
-}
-.shadow-all {
-  box-shadow: 0px 0px 10px #000;
 }
 ```
 
-<style>
-.shadow-list{
-    display:flex;
-    align-items: center;
-    flex-wrap: wrap;
-    list-style: none;
-}
-.shadow-list li{
-    width:100px;
-    height:100px;
-    background: #8080805c;
-    border-radius: 15px;
-    margin-right:20px;
-}
-.shadow-rightBottom {
-    box-shadow:2px 2px 5px #000;
-}
+### 9.2 阴影效果
+
+```css
+/* 四周阴影 */
 .shadow-all {
-   box-shadow:0px 0px 10px #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+/* 右下阴影 */
+.shadow-rightBottom {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 内阴影 */
 .shadow-inset {
-   box-shadow:inset 2px 2px 5px #000;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+/* 底部阴影 */
 .shadow-bottom {
-  box-shadow:0px 15px 10px -15px #000;
+    box-shadow: 0 15px 10px -15px rgba(0, 0, 0, 0.1);
 }
+
+/* 顶部内阴影 */
 .shadow-insetTop {
- box-shadow:inset 0px 15px 10px -15px #000;
+    box-shadow: inset 0 -15px 10px -15px rgba(0, 0, 0, 0.1);
 }
-</style>
-<ul class="shadow-list">
-    <li class="shadow-rightBottom"></li>
-    <li class="shadow-all"></li>
-</ul>
-
-- 内阴影
-
-```css
-box-shadow: inset 2px 2px 5px #000;
 ```
 
-<ul class="shadow-list">
-    <li class="shadow-inset"></li>
-</ul>
-
-- 底部阴影
+### 9.3 渐变
 
 ```css
-box-shadow: 0px 15px 10px -15px #000;
+/* 线性渐变 - 上下 */
+.gradient-vertical {
+    background: linear-gradient(blue, pink);
+}
+
+/* 线性渐变 - 左右 */
+.gradient-horizontal {
+    background: linear-gradient(to right, blue, pink);
+}
+
+/* 对角线渐变 */
+.gradient-diagonal {
+    background: linear-gradient(to bottom right, blue, pink);
+}
+
+/* 角度渐变 */
+.gradient-angle {
+    background: linear-gradient(70deg, blue, pink);
+}
+
+/* 多色渐变 */
+.gradient-multi {
+    background: linear-gradient(red, yellow, blue, orange);
+}
+
+/* 径向渐变 */
+.gradient-radial {
+    background: radial-gradient(circle, blue, pink);
+}
 ```
 
-<ul class="shadow-list">
-    <li class="shadow-bottom"></li>
-</ul>
-
-- 顶部阴影
+### 9.4 文字溢出省略
 
 ```css
-box-shadow: inset 0px 15px 10px -15px #000;
+/* 单行省略 */
+.text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 多行省略 */
+.text-ellipsis-2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 ```
 
-<ul class="shadow-list">
-    <li class="shadow-insetTop"></li>
-</ul>
+### 9.5 清除浮动
 
-- 伪元素::before 和::after 的乐趣
-  使用伪元素::before 和::after，我们能创造出非常逼真的只有图片才能实现的阴影效果
+```css
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* 现代方式 - 使用 flex 或 grid 代替 */
+.container {
+    display: flex;  /* 不需要清除浮动 */
+}
+```
+
+### 9.6 居中布局
+
+```css
+/* 水平居中 */
+.center-h {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 绝对定位居中 */
+.center-abs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Flex 居中 */
+.center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Grid 居中 */
+.center-grid {
+    display: grid;
+    place-items: center;
+}
+```
+
+## 10 性能优化
+
+### 10.1 减少重排与重绘
+
+- 批量修改 DOM 样式
+- 使用 CSS 变量替代动态计算
+- 使用 transform 和 opacity 做动画（不触发重排重绘）
+
+正确示例：
+
+```css
+/* 推荐：使用 transform */
+.animates-element {
+    transition: transform 0.3s ease;
+}
+.animates-element:hover {
+    transform: translateY(-5px);
+}
+
+/* 不推荐：会触发重排 */
+.animates-element:hover {
+    margin-top: -5px;
+}
+```
+
+### 10.2 使用 will-change
+
+```css
+.animated-element {
+    will-change: transform;
+    transition: transform 0.3s ease;
+}
+```
+
+### 10.3 避免使用 @import
+
+正确示例：
 
 ```html
-<style>
-  .shadow {
-    width: 300px;
-    height: 100px;
-    background: #ccc;
-    border-radius: 15px;
-    margin: 10px;
-    position: relative;
-    max-width: 270px;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3), 0px 0px 20px rgba(0, 0, 0, 0.1) inset;
-  }
-
-  .shadow::before,
-  .shadow::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-  }
-
-  .shadow::before,
-  .shadow::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    bottom: 15px;
-    left: 10px;
-    width: 50%;
-    height: 20%;
-  }
-
-  .shadow::before,
-  .shadow::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    bottom: 15px;
-    left: 10px;
-    width: 50%;
-    height: 20%;
-    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
-    transform: rotate(-3deg);
-  }
-
-  .shadow::after {
-    right: 10px;
-    left: auto;
-    transform: rotate(3deg);
-  }
-</style>
-<div class="shadow"></div>
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="components.css">
 ```
 
-<style>
-  .shadow {
-    width: 300px;
-    height: 100px;
-    background: #ccc;
-    border-radius: 15px;
-    margin: 10px;
-    position: relative;
-    max-width: 270px;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3), 0px 0px 20px rgba(0, 0, 0, 0.1) inset;
-  }
-
-  .shadow::before,
-  .shadow::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-  }
-
-  .shadow::before,
-  .shadow::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    bottom: 15px;
-    left: 10px;
-    width: 50%;
-    height: 20%;
-  }
-
-  .shadow::before,
-  .shadow::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    bottom: 15px;
-    left: 10px;
-    width: 50%;
-    height: 20%;
-    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
-    transform: rotate(-3deg);
-  }
-
-  .shadow::after {
-    right: 10px;
-    left: auto;
-    transform: rotate(3deg);
-  }
-</style>
-<div class="shadow"></div>
-
-#### 渐变
-
-- 基础线性渐变（从上往下）
+错误示例：
 
 ```css
-background: linear-gradient(blue, pink);
+/* base.css 中 */
+@import url("components.css");  /* 阻塞加载 */
 ```
 
-<style>
-    .gradient1{
-        width: 100px;
-        height: 100px;
-        background: linear-gradient(blue, pink);
+## 11 代码检测
+
+### 11.1 stylelint 配置
+
+```json
+{
+    "extends": "stylelint-config-standard",
+    "rules": {
+        "selector-class-pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*$",
+        "property-no-unknown": true,
+        "no-descending-specificity": null,
+        "selector-pseudo-class-no-unknown": [
+            true,
+            {
+                "ignorePseudoClasses": ["global"]
+            }
+        ]
     }
-</style>
-<div class="gradient1"></div>
-
-- 指定方向线性渐变
-
-```css
-background: linear-gradient(to right, blue, pink);
+}
 ```
-
-<style>
-    .gradient2{
-        width: 200px;
-        height: 100px;
-        background: linear-gradient(to right, blue, pink);
-    }
-</style>
-<div class="gradient2"></div>
-
-- 对角线线性渐变
-
-```css
-background: linear-gradient(to bottom right, blue, pink);
-```
-
-<style>
-    .gradient3{
-        width: 200px;
-        height: 100px;
-        background: linear-gradient(to bottom right, blue, pink);
-    }
-</style>
-<div class="gradient3"></div>
-
-- 设置渐变角度
-
-```css
-background: linear-gradient(70deg, blue, pink);
-```
-
-<style>
-    .gradient4{
-        width: 200px;
-        height: 100px;
-        background: linear-gradient(70deg, blue, pink);
-    }
-</style>
-<div class="gradient4"></div>
-
-- 多色渐变
-
-```css
-background: linear-gradient(red, yellow, blue, orange);
-```
-
-<style>
-    .gradient5{
-        width: 100px;
-        height: 150px;
-        background: linear-gradient(red, yellow, blue, orange);
-    }
-</style>
-<div class="gradient5"></div>
