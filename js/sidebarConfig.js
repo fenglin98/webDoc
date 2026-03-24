@@ -99,6 +99,10 @@ module.exports = {
                     path: "/views/studyPage/vueV3Study",
                 },
                 {
+                    title: "GitHub Pages 博客搭建",
+                    path: "/views/studyPage/githubPages",
+                },
+                {
                     title: "App 开发",
                     collapsable: true,
                     children: [
