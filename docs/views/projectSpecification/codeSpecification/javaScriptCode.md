@@ -1,6 +1,6 @@
 ---
 title: JavaScript 规范
-date: 2026-03-15
+date: 2026-02-02 07:58
 author: Maple 
 ---
 

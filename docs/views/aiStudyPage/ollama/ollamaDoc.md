@@ -1,7 +1,7 @@
 ---
 title: Ollama 使用指南
 description: Ollama 本地大模型运行工具
-date: 2026-03-15
+date: 2026-02-05 15:26
 author: Maple
 ---
 
